@@ -8,7 +8,7 @@
 
 To install Rust, visit the official installation page: [https://www.rust-lang.org/tools/install](https://www.rust-lang.org/tools/install)
 
-2. Install 'cargo-binstall'
+2. Install `cargo-binstall`:
 
 ```bash
 curl -L --proto '=https' --tlsv1.2 -sSf https://raw.githubusercontent.com/cargo-bins/cargo-binstall/main/install-from-binstall-release.sh | bash
@@ -20,9 +20,9 @@ curl -L --proto '=https' --tlsv1.2 -sSf https://raw.githubusercontent.com/cargo-
 cargo binstall dioxus-cli
 ```
 
-### Run the app:
+### Run the app
 
-1. To serve the app with the web server run:
+1. Serve the app with the web server:
 
 ```bash
 dx serve
@@ -30,7 +30,7 @@ dx serve
 
 2. Open your browser and navigate to http://localhost:8080 to view the app.
 
-### Generate static site
+### Generate static site:
 
 ```bash
 dx bundle
