@@ -1,7 +1,8 @@
 use dioxus::prelude::*;
 
 fn main() {
-    launch(App);
+    LaunchBuilder::new()
+        .launch(App);
 }
 
 #[derive(Clone, Copy, PartialEq)]

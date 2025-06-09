@@ -12,7 +12,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5b0ca9e6-ac01-405d-bb09-91a771e94b9c" name="Changes" comment="Code cleanup">
-      <change beforePath="$PROJECT_DIR$/Cargo.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.rs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -101,7 +102,7 @@
       <updated>1749472170536</updated>
       <workItem from="1749472172016" duration="3614000" />
       <workItem from="1749480750656" duration="130000" />
-      <workItem from="1749481092151" duration="2209000" />
+      <workItem from="1749481092151" duration="5482000" />
     </task>
     <task id="LOCAL-00001" summary="Initial website">
       <option name="closed" value="true" />
@@ -119,7 +120,15 @@
       <option name="project" value="LOCAL" />
       <updated>1749483042287</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Code cleanup">
+      <option name="closed" value="true" />
+      <created>1749483360942</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1749483360942</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
