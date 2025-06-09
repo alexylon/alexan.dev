@@ -22,7 +22,7 @@ cargo binstall dioxus-cli
 
 ### Run the app:
 
-1. To start both the backend server (with the calculation '/output' POST handler) and the frontend, run:
+1. To serve the app with the web server run:
 
 ```bash
 dx serve
