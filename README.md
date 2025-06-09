@@ -1,5 +1,7 @@
 ## My simple website in Rust
 
+(Currently running on my Raspberry Pi and might be slow)
+
 ### Prerequisites (one-time setup)
 
 1. Install Rust
