@@ -49,10 +49,6 @@ fn App() -> Element {
             rel: "stylesheet",
             href: asset!("/assets/styling/index.css")
         }
-        document::Link {
-            rel: "stylesheet",
-            href: asset!("/assets/styling/hack.css")
-        }
         link {
             rel: "stylesheet",
             href: theme().css_file(),
@@ -221,9 +217,11 @@ fn CareerSection() -> Element {
             h3 { "## Career History" }
             p { style: "margin-bottom: 0;", "FULL-STACK DEVELOPER" }
             p { i { "Proxiad, Aug 2023 - present" } }
+            br {}
 
             p { style: "margin-bottom: 0;", "SOFTWARE DEVELOPER" }
             p { i { "DXC Technology, Apr 2020 - Aug 2023" } }
+            br {}
 
             p { style: "margin-bottom: 0;", "WEB DEVELOPER INTERN" }
             p { i { "Camplight, Sep 2019 - Apr 2020" } }
@@ -238,18 +236,23 @@ fn EducationSection() -> Element {
             h3 { "## Education" }
             p { style: "margin-bottom: 0;", "CAMPLIGHT" }
             p { i { "React.js Fundamentals, Apr 2020" } }
+            br {}
 
             p { style: "margin-bottom: 0;", "SOFIA UNIVERSITY \"ST. KLIMENT OHRIDSKI\"" }
             p { i { "PhD of Theology, 2019" } }
+            br {}
 
             p { style: "margin-bottom: 0;", "MAXPLUS" }
             p { i { "Java 8 Fundamentals, 2018" } }
+            br {}
 
             p { style: "margin-bottom: 0;", "UNIVERSITY OF FORESTRY" }
             p { i { "Master of Engineering, 1997" } }
+            br {}
 
             p { style: "margin-bottom: 0;", "HIGH SCHOOL OF MATHEMATICS" }
             p { i { "Mathematics, 1990" } }
+            br {}
         }
     }
 }
