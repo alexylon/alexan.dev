@@ -1,0 +1,99 @@
+html {
+    scroll-behavior: smooth;
+}
+
+main {
+    /*font-family: monospace, monospace;*/
+    max-width: 60rem;
+    padding: 2rem;
+    margin: auto;
+}
+
+@media only screen and (max-device-width: 736px) {
+    main {
+        padding: 1rem;
+    }
+}
+
+h3 {
+    margin-top: 50px;
+    margin-bottom: 20px;
+}
+
+h1, h2, h3, h4, h5 {
+    margin-bottom: .1rem;
+}
+
+blockquote {
+    border-left: 1px solid #bdae93;
+    margin: 0.5em 10px;
+    padding: 0.5em 10px;
+}
+
+footer {
+    text-align: center;
+    margin-top: 40px;
+}
+
+ul > li {
+    list-style-type: '-  ';
+}
+
+hr {
+    margin: 1.875em 0;
+    border: none;
+    border-bottom: solid 1px #000000;
+}
+
+.dashed {
+    border: none;
+    height: 1px;
+    background: #000;
+    background: repeating-linear-gradient(90deg, #ebdbb2, #ebdbb2 6px, transparent 2px, transparent 8px);
+}
+
+.skill-list {
+    list-style-type: none;
+    max-width: 300px;
+}
+
+.skill-list li {
+    display: flex;
+    justify-content: space-between;
+}
+
+.career-list {
+    list-style-type: none;
+    max-width: 550px;
+}
+
+.career-list li {
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav-links {
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav-links span {
+    margin: 0 5px;
+}
+
+#about-me img {
+    float: left;
+    height: 100px;
+    margin-right: 20px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+h2 {
+    margin-bottom: -20px !important;
+}
+
+h3 {
+    margin-top: 40px;
+    margin-bottom: 10px !important;
+}
