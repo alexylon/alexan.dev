@@ -30,10 +30,10 @@ dx serve
 
 2. Open your browser and navigate to http://localhost:8080 to view the app.
 
-[![forthebadge](https://forthebadge.com/images/badges/made-with-rust.svg)](https://forthebadge.com)
-
-### Generate statis stite
+### Generate static site
 
 ```bash
 dx bundle
 ```
+
+[![forthebadge](https://forthebadge.com/images/badges/made-with-rust.svg)](https://forthebadge.com)
