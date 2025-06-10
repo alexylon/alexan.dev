@@ -1,0 +1,21 @@
+pub mod about_section;
+pub mod career_section;
+pub mod certifications_section;
+pub mod contact_section;
+pub mod education_section;
+pub mod footer_section;
+pub mod header_section;
+pub mod languages_section;
+pub mod nav_section;
+pub mod skills_section;
+
+pub use about_section::AboutSection;
+pub use career_section::CareerSection;
+pub use certifications_section::CertificationsSection;
+pub use contact_section::ContactSection;
+pub use education_section::EducationSection;
+pub use footer_section::FooterSection;
+pub use header_section::HeaderSection;
+pub use languages_section::LanguagesSection;
+pub use nav_section::NavSection;
+pub use skills_section::SkillsSection;
