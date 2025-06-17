@@ -7,23 +7,23 @@ pub fn EducationSection() -> Element {
             id: "education",
             h3 { "## Education" }
             p { style: "margin-bottom: 0;", "CAMPLIGHT" }
-            p { i { "React.js Fundamentals, Apr 2020" } }
+            p { i { "React and JavaScript/TypeScript Fundamentals" } }
+            br {}
+            
+            p { style: "margin-bottom: 0;", "MAXPLUS" }
+            p { i { "Java Fundamentals" } }
             br {}
 
             p { style: "margin-bottom: 0;", "SOFIA UNIVERSITY \"ST. KLIMENT OHRIDSKI\"" }
-            p { i { "PhD of Theology, 2019" } }
-            br {}
-
-            p { style: "margin-bottom: 0;", "MAXPLUS" }
-            p { i { "Java 8 Fundamentals, 2018" } }
+            p { i { "PhD of Theology" } }
             br {}
 
             p { style: "margin-bottom: 0;", "UNIVERSITY OF FORESTRY" }
-            p { i { "Master of Engineering, 1997" } }
+            p { i { "Master of Engineering" } }
             br {}
 
             p { style: "margin-bottom: 0;", "HIGH SCHOOL OF MATHEMATICS" }
-            p { i { "Mathematics, 1990" } }
+            p { i { "Mathematics" } }
             br {}
         }
     }
