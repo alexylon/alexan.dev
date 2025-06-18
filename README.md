@@ -1,4 +1,4 @@
-## My simple website in Rust
+## My simple web-resume, made with Rust and compiled to WASM (WebAssembly)
 
 (Currently running on my Raspberry Pi and might be slow)
 
@@ -14,7 +14,7 @@ To install Rust, visit the official installation page: [https://www.rust-lang.or
 curl -L --proto '=https' --tlsv1.2 -sSf https://raw.githubusercontent.com/cargo-bins/cargo-binstall/main/install-from-binstall-release.sh | bash
 ````
 
-3. Install Dioxus CLI:
+3. Install Dioxus CLI:   
 
 ```bash
 cargo binstall dioxus-cli

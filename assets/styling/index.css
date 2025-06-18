@@ -50,8 +50,22 @@ footer {
     margin-top: 40px;
 }
 
+ul {
+    padding-inline-start: 25px;
+}
+
 ul > li {
-    list-style-type: '-  ';
+    position: relative;
+    margin-bottom: 5px;
+    list-style-type: none;
+    padding-left: 1.2em; /* Adjust as needed */
+}
+
+ul > li::before {
+    content: "• ";
+    position: absolute;
+    left: 0;
+    top: 0;
 }
 
 hr {
@@ -69,10 +83,22 @@ hr {
 
 .skill-list {
     list-style-type: none;
+    max-width: 600px;
+}
+
+.education-list {
+    list-style-type: none;
+    max-width: 550px;
+}
+
+.languages-list {
+    list-style-type: none;
     max-width: 300px;
 }
 
-.skill-list li {
+.skill-list li,
+.languages-list li,
+.education-list li {
     display: flex;
     justify-content: space-between;
 }
@@ -96,19 +122,61 @@ hr {
     margin: 0 5px;
 }
 
+#get-in-touch {
+    display: flex;
+    justify-content: space-between;
+}
+
+#get-in-touch span {
+    margin: 0 5px;
+}
+
+#about-me {
+    position: relative;
+    overflow: hidden;
+}
+
+#about-me::after {
+    content: "";
+    display: block;
+    clear: both;
+    height: 0;
+}
+
 #about-me img {
     float: left;
     height: 120px;
     margin-right: 20px;
     margin-top: 5px;
-    margin-bottom: 10px;
 }
 
 h2 {
-    margin-bottom: -20px !important;
+    margin-bottom: -15px;
 }
 
 h3 {
     margin-top: 40px;
-    margin-bottom: 10px !important;
+    margin-bottom: 10px;
+}
+
+h4 {
+    margin-bottom: 10px;
+    margin-left: 10px;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+}
+
+#theme-switch {
+    margin-top: 17px;
+}
+
+@media (max-width: 650px) {
+    .skill-list li,
+    .education-list li {
+        flex-direction: column;
+        align-items: flex-start;
+    }
 }

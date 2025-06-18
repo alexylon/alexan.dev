@@ -1,3 +1,4 @@
+use crate::components::data::LANGUAGES;
 use dioxus::prelude::*;
 
 #[component]
@@ -7,26 +8,14 @@ pub fn LanguagesSection() -> Element {
             id: "languages",
             h3 { "## Spoken Languages" }
             ul {
-                class: "skill-list",
-                li {
-                    span { "Bulgarian" }
-                    span { "+++++" }
-                }
-                li {
-                    span { "English" }
-                    span { "++++-" }
-                }
-                li {
-                    span { "Italian" }
-                    span { "+++--" }
-                }
-                li {
-                    span { "Russian" }
-                    span { "++---" }
-                }
-                li {
-                    span { "Greek" }
-                    span { "+----" }
+                class: "languages-list",
+                {
+                    LANGUAGES.iter().map(|lang| rsx! {
+                        li {
+                            span { "{lang.name}" }
+                            span { "{lang.level}" }
+                        }
+                    })
                 }
             }
         }

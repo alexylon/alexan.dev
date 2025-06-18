@@ -41,6 +41,13 @@ impl Theme {
             Theme::Light => Theme::Dark,
         }
     }
+
+    fn icon(&self) -> Asset {
+        match self {
+            Theme::Dark => asset!("/assets/icons/light_mode.svg"),
+            Theme::Light => asset!("/assets/icons/dark_mode.svg"),
+        }
+    }
 }
 
 #[component]
@@ -62,16 +69,15 @@ fn App() -> Element {
         main {
             class: "{theme().css_class()}",
             id: "top",
-            NavSection { theme }
-            br {}
-            HeaderSection {}
+            // NavSection { theme }
+            HeaderSection { theme }
             AboutSection {}
             SkillsSection {}
             CareerSection {}
+            ProjectsSection {}
             EducationSection {}
             CertificationsSection {}
             LanguagesSection {}
-            ContactSection {}
             FooterSection {}
             }
     }

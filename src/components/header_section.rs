@@ -1,24 +1,61 @@
+use crate::components::data::{ContactLinkHref, CONTACT_LINKS, PROFILE};
+use crate::Theme;
 use dioxus::prelude::*;
 
 #[component]
-pub fn HeaderSection() -> Element {
+pub fn HeaderSection(theme: Signal<Theme>) -> Element {
     rsx! {
         header {
-            h2 { "Alexander Alexandrov" }
-            h2 { "====================" }
-
-            br {}
+            id: "header",
+            div {
+                class: "container",
+                div {
+                    h2 { "{PROFILE.name}" }
+                    h4 { "{PROFILE.title}" }
+                }
+                a {
+                    id: "theme-switch",
+                    onclick: move |_| theme.set(theme().toggle()),
+                    img {
+                        src: "{theme().icon()}",
+                        alt: "Theme Icon",
+                        width: "24",
+                    }
+                }
+            }
             br {}
 
             p {
-                "Full Stack Software Developer based in Sofia | Currently at Proxiad."
-                br {}
-                br {}
-                a {
-                    href: asset!("/assets/resume_alexander.pdf"),
-                    download: "resume_alexander_alexandrov.pdf",
-                    "Resume ⬇"
-                }
+                id: "get-in-touch",
+                {CONTACT_LINKS.iter().enumerate().map(|(i, link)| {
+                    let link_elem = match &link.href {
+                        ContactLinkHref::Plain(href) => rsx! {
+                            a {
+                                href: "{href}",
+                                target: link.target.unwrap_or(""),
+                                rel: link.rel.unwrap_or(""),
+                                download: link.download.unwrap_or(""),
+                                "{link.label}"
+                            }
+                        },
+                        ContactLinkHref::ResumeAsset => rsx! {
+                            a {
+                                // href: asset!("/assets/resume_alexander.pdf"),
+                                download: link.download.unwrap_or(""),
+                                "{link.label}"
+                            }
+                        },
+                    };
+
+                    if i < CONTACT_LINKS.len() - 1 {
+                        rsx! {
+                            {link_elem}
+                            span { " | " }
+                        }
+                    } else {
+                        link_elem
+                    }
+                })}
             }
         }
     }

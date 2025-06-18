@@ -18,7 +18,6 @@ pub fn NavSection(theme: Signal<Theme>) -> Element {
                     onclick: move |_| theme.set(theme().toggle()),
                     "{theme().toggle_text()}"
                 }
-                span { "|" }
             }
         }
     }

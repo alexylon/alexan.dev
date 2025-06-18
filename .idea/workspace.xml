@@ -11,14 +11,24 @@
     </cargoProject>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b3157e2f-fd07-489e-b2a5-8b49df018d62" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/alexandroff.dev.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/git_toolbox_prj.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+    <list default="true" id="b3157e2f-fd07-489e-b2a5-8b49df018d62" name="Changes" comment="Separate components into individual files. Update content">
+      <change afterPath="$PROJECT_DIR$/assets/icons/dark_mode.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/icons/light_mode.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/data.rs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/resume_alexander.pdf" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/styling/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/styling/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/about_section.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/about_section.rs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/career_section.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/career_section.rs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/contact_section.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/projects_section.rs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/education_section.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/education_section.rs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/footer_section.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/footer_section.rs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/header_section.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/header_section.rs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/languages_section.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/languages_section.rs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/mod.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/mod.rs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/nav_section.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/nav_section.rs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/skills_section.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/skills_section.rs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.rs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -27,40 +37,56 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="RsBuildProfile:dev" />
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Rust File" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MacroExpansionManager">
     <option name="directoryName" value="7qPdBQiQ" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "customColor": "",
-  "associatedIndex": 3
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 3
+}</component>
   <component name="ProjectId" id="2yJv0ObeXCljtcGZ4rWaJxDZYRx" />
+  <component name="ProjectLevelVcsManager">
+    <OptionsSetting value="false" id="Update" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "RunOnceActivity.rust.reset.selective.auto.import": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "main",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "org.rust.cargo.project.model.PROJECT_DISCOVERY": "true",
-    "org.rust.first.attach.projects": "true",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.rust.reset.selective.auto.import&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;org.rust.cargo.project.model.PROJECT_DISCOVERY&quot;: &quot;true&quot;,
+    &quot;org.rust.cargo.project.model.impl.CargoExternalSystemProjectAware.subscribe.first.balloon&quot;: &quot;&quot;,
+    &quot;org.rust.first.attach.projects&quot;: &quot;true&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/assets/icons" />
+    </key>
+  </component>
   <component name="RunManager" selected="Cargo.Run alexandroff-dev">
     <configuration name="Run alexandroff-dev" type="CargoCommandRunConfiguration" factoryName="Cargo Command">
       <option name="buildProfileId" value="dev" />
@@ -108,11 +134,27 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1749565267498</updated>
-      <workItem from="1749565268859" duration="7856000" />
+      <workItem from="1749565268859" duration="8944000" />
+      <workItem from="1750229815418" duration="15861000" />
+      <workItem from="1750250379291" duration="4448000" />
+      <workItem from="1750258667943" duration="5461000" />
     </task>
+    <task id="LOCAL-00001" summary="Separate components into individual files. Update content">
+      <option name="closed" value="true" />
+      <created>1749575748731</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1749575748731</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Separate components into individual files. Update content" />
+    <option name="LAST_COMMIT_MESSAGE" value="Separate components into individual files. Update content" />
   </component>
 </project>
