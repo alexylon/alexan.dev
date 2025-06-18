@@ -36,6 +36,6 @@ dx serve
 dx bundle
 ```
 
-The public directory in the web folder will always be placed alongside the server binary. In this case it is "target/dx/alexandroff-dev/release/web/public"
+The public directory in the web folder will always be placed alongside the server binary. In this case it is `target/dx/alexandroff-dev/release/web/public`
 
 [![forthebadge](https://forthebadge.com/images/badges/made-with-rust.svg)](https://forthebadge.com)
