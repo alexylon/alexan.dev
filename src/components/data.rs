@@ -187,6 +187,10 @@ pub const EDUCATION: &[EducationEntry] = &[
         title: "PhD, Theology:",
         institution: "Sofia University “St. Kliment Ohridski”",
     },
+    EducationEntry {
+        title: "Mathematics:",
+        institution: "High School of Mathematics",
+    },
 ];
 
 pub struct Language<'a> {
