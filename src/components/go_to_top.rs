@@ -23,7 +23,7 @@ pub fn GoToTop() -> Element {
                     .and_then(|w| w.page_y_offset().ok())
                     .unwrap_or(0.0);
 
-                show_button.set(scroll_y > 100.0);
+                show_button.set(scroll_y > 150.0);
             }
         };
 
@@ -42,7 +42,7 @@ pub fn GoToTop() -> Element {
             .and_then(|w| w.page_y_offset().ok())
             .unwrap_or(0.0);
         
-        show_button.set(initial_scroll > 100.0);
+        show_button.set(initial_scroll > 150.0);
 
         Some(closure)
     });
