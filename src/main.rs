@@ -42,10 +42,17 @@ impl Theme {
         }
     }
 
-    fn icon(&self) -> Asset {
+    fn icon_theme(&self) -> Asset {
         match self {
             Theme::Dark => asset!("/assets/icons/light_mode.svg"),
             Theme::Light => asset!("/assets/icons/dark_mode.svg"),
+        }
+    }
+
+    fn icon_up(&self) -> Asset {
+        match self {
+            Theme::Dark => asset!("/assets/icons/keyboard_arrow_up_light.svg"),
+            Theme::Light => asset!("/assets/icons/keyboard_arrow_up_dark.svg"),
         }
     }
 }
@@ -53,6 +60,20 @@ impl Theme {
 #[component]
 fn App() -> Element {
     let theme = use_signal(|| Theme::Dark);
+    let font_url = asset!("/assets/fonts/JetBrainsMono-Regular.woff2");
+    let font_css = format!(
+        "@font-face {{
+            font-family: 'JetBrains Mono';
+            src: url('{}') format('woff2');
+            font-weight: normal;
+            font-style: normal;
+            font-display: swap;
+        }}
+        body {{
+            font-family: 'JetBrains Mono', monospace;
+        }}",
+        font_url
+    );
 
     rsx! {
         document::Link {
@@ -63,6 +84,9 @@ fn App() -> Element {
             rel: "stylesheet",
             href: theme().css_file(),
             id: "theme-css"
+        }
+        style {
+            "{font_css}"
         }
         document::Title { "Alexander" }
 
@@ -79,6 +103,7 @@ fn App() -> Element {
             CertificationsSection {}
             LanguagesSection {}
             FooterSection {}
-            }
+            GoToTop {}
+        }
     }
 }

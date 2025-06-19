@@ -17,7 +17,7 @@ pub fn HeaderSection(theme: Signal<Theme>) -> Element {
                     id: "theme-switch",
                     onclick: move |_| theme.set(theme().toggle()),
                     img {
-                        src: "{theme().icon()}",
+                        src: "{theme().icon_theme()}",
                         alt: "Theme Icon",
                         width: "24",
                     }

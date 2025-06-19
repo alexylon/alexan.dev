@@ -1,24 +1,29 @@
 * {
     box-sizing: border-box;
     text-rendering: geometricPrecision;
+    -webkit-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 14px;
+    -webkit-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    text-size-adjust: 100%;
 }
 
 body {
     font-size: 1rem;
     line-height: 1.5rem;
     margin: 0;
-    font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
-    Bitstream Vera Sans Mono, Courier New, monospace, serif;
     word-wrap: break-word;
 }
 
-html {
-    scroll-behavior: smooth;
-    font-size: 14px;
-}
-
 main {
-    /*font-family: monospace, monospace;*/
     max-width: 60rem;
     padding: 2rem;
     margin: auto;
@@ -58,7 +63,7 @@ ul > li {
     position: relative;
     margin-bottom: 5px;
     list-style-type: none;
-    padding-left: 1.2em; /* Adjust as needed */
+    padding-left: 1.2em;
 }
 
 ul > li::before {
@@ -66,6 +71,57 @@ ul > li::before {
     position: absolute;
     left: 0;
     top: 0;
+}
+
+.skill-list li,
+.languages-list li,
+.education-list li {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.skill-list li span:first-child {
+    width: 170px;
+    flex-shrink: 0;
+}
+
+.education-list li span:first-child {
+    width: 300px;
+    flex-shrink: 0;
+    font-weight: 700;
+}
+
+.languages-list li span:first-child {
+    width: 100px;
+    flex-shrink: 0;
+}
+
+.skill-list li span:nth-child(2),
+.languages-list li span:nth-child(2),
+.education-list li span:nth-child(2) {
+    white-space: nowrap;
+}
+
+.skill-list li span:nth-child(2) {
+    font-weight: 700;
+}
+
+.career-list {
+    list-style-type: none;
+    max-width: 550px;
+}
+
+.career-list li {
+    display: flex;
+}
+
+.nav-links {
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav-links span {
+    margin: 0 5px;
 }
 
 hr {
@@ -79,47 +135,6 @@ hr {
     height: 1px;
     background: #000;
     background: repeating-linear-gradient(90deg, #ebdbb2, #ebdbb2 6px, transparent 2px, transparent 8px);
-}
-
-.skill-list {
-    list-style-type: none;
-    max-width: 600px;
-}
-
-.education-list {
-    list-style-type: none;
-    max-width: 550px;
-}
-
-.languages-list {
-    list-style-type: none;
-    max-width: 300px;
-}
-
-.skill-list li,
-.languages-list li,
-.education-list li {
-    display: flex;
-    justify-content: space-between;
-}
-
-.career-list {
-    list-style-type: none;
-    max-width: 550px;
-}
-
-.career-list li {
-    display: flex;
-    justify-content: space-between;
-}
-
-.nav-links {
-    display: flex;
-    justify-content: space-between;
-}
-
-.nav-links span {
-    margin: 0 5px;
 }
 
 #get-in-touch {
@@ -174,9 +189,69 @@ h4 {
 }
 
 @media (max-width: 650px) {
-    .skill-list li,
+    .skill-list li {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+@media (max-width: 730px) {
     .education-list li {
         flex-direction: column;
         align-items: flex-start;
     }
+}
+
+#go-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    z-index: 1000;
+    background-color: rgba(45, 85, 88, 0.7);
+    border-radius: 50%;
+    padding: 12px;
+    box-shadow: 0 4px 12px rgba(45, 85, 88, 0.3);
+    transition: all 0.3s ease;
+    opacity: 0.8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+
+    /* Fix for mobile Safari tap highlights */
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+
+    /* Prevent focus outline on mobile */
+    outline: none;
+}
+
+/* Only apply hover effects on devices that can actually hover */
+@media (hover: hover) and (pointer: fine) {
+    #go-to-top:hover {
+        opacity: 1;
+        transform: translateY(-2px);
+        box-shadow: 0 6px 16px rgba(45, 85, 88, 0.4);
+        background-color: rgba(45, 85, 88, 0.9);
+    }
+}
+
+#go-to-top:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(45, 85, 88, 0.5);
+}
+
+#go-to-top img {
+    display: block;
+    width: 36px;
+    height: 36px;
+}
+
+#go-to-top.hidden {
+    display: none;
 }

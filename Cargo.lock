@@ -31,6 +31,9 @@ name = "alexandroff-dev"
 version = "0.1.0"
 dependencies = [
  "dioxus",
+ "log",
+ "wasm-bindgen",
+ "web-sys",
 ]
 
 [[package]]

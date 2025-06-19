@@ -3,11 +3,10 @@ use dioxus::prelude::*;
 #[component]
 pub fn FooterSection() -> Element {
     rsx! {
-        a { href: "#top", "Go to top" }
         hr { class: "dashed" }
 
         footer {
-            p { 
+            p {
                 "Hosted on my Raspberry Pi and served with "
                 a {
                     href: "https://github.com/alexylon/serve",
