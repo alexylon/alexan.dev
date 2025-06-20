@@ -97,7 +97,7 @@ pub struct CareerEntry<'a> {
 
 pub const CAREER_ENTRIES: &[CareerEntry] = &[
     CareerEntry {
-        title: "Full-Stack Software Developer",
+        title: "Full-Stack Developer",
         company_and_period: "Proxiad | Aug 2023 – Present",
         responsibilities: &[
             "Deliver complex applications with React/Next.js, TypeScript, and SCSS.",
@@ -106,7 +106,7 @@ pub const CAREER_ENTRIES: &[CareerEntry] = &[
         ],
     },
     CareerEntry {
-        title: "Full-Stack Software Developer",
+        title: "Full-Stack Developer",
         company_and_period: "DXC Technology | Apr 2020 - Aug 2023",
         responsibilities: &[
             "Modernized an enterprise solution by migrating critical components from Java to Rust.",
