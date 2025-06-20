@@ -5,7 +5,7 @@ use dioxus::prelude::*;
 pub fn SkillsSection() -> Element {
     rsx! {
         section {
-            id: "resume",
+            class: "skills",
             h3 { "## Key Tech Skills" }
             ul {
                 class: "skill-list",

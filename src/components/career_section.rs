@@ -5,7 +5,7 @@ use dioxus::prelude::*;
 pub fn CareerSection() -> Element {
     rsx! {
         section {
-            id: "career",
+            class: "career",
             h3 { "## Career History" }
             {CAREER_ENTRIES.iter().map(|entry| rsx! {
                 h4 {

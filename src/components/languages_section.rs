@@ -5,7 +5,7 @@ use dioxus::prelude::*;
 pub fn LanguagesSection() -> Element {
     rsx! {
         section {
-            id: "languages",
+            class: "languages",
             h3 { "## Spoken Languages" }
             ul {
                 class: "languages-list",

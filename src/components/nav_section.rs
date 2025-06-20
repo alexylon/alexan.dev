@@ -9,12 +9,12 @@ pub fn NavSection(theme: Signal<Theme>) -> Element {
                 class: "nav-links",
                 a { href: "#about", "About" }
                 span { "|" }
-                a { href: "#resume", "Resume" }
+                a { href: "#skills", "Resume" }
                 span { "|" }
                 a { href: "#contact", "Contact" }
                 span { "|" }
                 a {
-                    id: "switch",
+                    class: "switch",
                     onclick: move |_| theme.set(theme().toggle()),
                     "{theme().toggle_text()}"
                 }

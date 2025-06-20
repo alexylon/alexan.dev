@@ -1,4 +1,5 @@
 use dioxus::prelude::*;
+use std::rc::Rc;
 
 mod components;
 use components::*;
@@ -60,6 +61,7 @@ impl Theme {
 #[component]
 fn App() -> Element {
     let theme = use_signal(|| Theme::Dark);
+    let mut top_element: Signal<Option<Rc<MountedData>>> = use_signal(|| None);
     let font_url = asset!("/assets/fonts/JetBrainsMono-Regular.woff2");
     let font_css = format!(
         "@font-face {{
@@ -83,7 +85,7 @@ fn App() -> Element {
         link {
             rel: "stylesheet",
             href: theme().css_file(),
-            id: "theme-css"
+            class: "theme-css"
         }
         style {
             "{font_css}"
@@ -92,7 +94,8 @@ fn App() -> Element {
 
         main {
             class: "{theme().css_class()}",
-            id: "top",
+            class: "top",
+            onmounted: move |cx| top_element.set(Some(cx.data())),
             // NavSection { theme }
             HeaderSection { theme }
             AboutSection {}
@@ -103,7 +106,7 @@ fn App() -> Element {
             CertificationsSection {}
             LanguagesSection {}
             FooterSection {}
-            GoToTop {}
+            ScrollToTop { top_element }
         }
     }
 }

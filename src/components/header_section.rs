@@ -6,7 +6,7 @@ use dioxus::prelude::*;
 pub fn HeaderSection(theme: Signal<Theme>) -> Element {
     rsx! {
         header {
-            id: "header",
+            class: "header",
             div {
                 class: "container",
                 div {
@@ -14,7 +14,7 @@ pub fn HeaderSection(theme: Signal<Theme>) -> Element {
                     h4 { "{PROFILE.title}" }
                 }
                 a {
-                    id: "theme-switch",
+                    class: "theme-switch",
                     onclick: move |_| theme.set(theme().toggle()),
                     img {
                         src: "{theme().icon_theme()}",
@@ -26,7 +26,7 @@ pub fn HeaderSection(theme: Signal<Theme>) -> Element {
             br {}
 
             p {
-                id: "get-in-touch",
+                class: "get-in-touch",
                 {CONTACT_LINKS.iter().enumerate().map(|(i, link)| {
                     let link_elem = match &link.href {
                         ContactLinkHref::Plain(href) => rsx! {

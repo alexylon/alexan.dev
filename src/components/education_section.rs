@@ -5,7 +5,7 @@ use dioxus::prelude::*;
 pub fn EducationSection() -> Element {
     rsx! {
         section {
-            id: "education",
+            class: "education",
             h3 { "## Education" }
             ul {
                 class: "education-list",

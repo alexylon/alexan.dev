@@ -25,7 +25,7 @@ pub const CONTACT_LINKS: &[ContactLink] = &[
     ContactLink {
         label: "Sofia",
         href: ContactLinkHref::Plain(
-            "https://www.google.com/maps/place/Lyulin,+Sofia,+Sofia/@42.7210415,23.2634153,14z",
+            "https://www.google.com/maps/place/42°41'05.7\"N+23°19'08.5\"E",
         ),
         target: Some("_blank"),
         rel: Some("noopener noreferrer"),
@@ -77,7 +77,7 @@ pub const SKILL_CATEGORIES: &[SkillCategory] = &[
     },
     SkillCategory {
         label: "Back-End / Cloud:",
-        skills: "AWS (CDK & SDK), PostgreSQL, REST/GraphQL APIs",
+        skills: "AWS (SDK), PostgreSQL, REST/GraphQL, Spring MVC",
     },
     SkillCategory {
         label: "DevOps / IaC:",
@@ -176,7 +176,7 @@ pub const EDUCATION: &[EducationEntry] = &[
         institution: "MaxPlus",
     },
     EducationEntry {
-        title: "React & JavaScript Fundamentals:",
+        title: "React & JavaScript:",
         institution: "Camplight",
     },
     EducationEntry {

@@ -5,7 +5,7 @@ use dioxus::prelude::*;
 pub fn ProjectsSection() -> Element {
     rsx! {
         section {
-            id: "projects",
+            class: "projects",
             h3 { "## Selected Projects" }
             ul {
                 {
