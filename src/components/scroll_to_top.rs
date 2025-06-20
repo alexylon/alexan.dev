@@ -29,8 +29,7 @@ pub fn ScrollToTop(top_element: Signal<Option<Rc<MountedData>>>) -> Element {
             }
         };
 
-        let closure =
-            wasm_bindgen::closure::Closure::wrap(Box::new(handle_scroll) as Box<dyn FnMut()>);
+        let closure = wasm_bindgen::closure::Closure::new(handle_scroll);
 
         if let Err(e) =
             window.add_event_listener_with_callback("scroll", closure.as_ref().unchecked_ref())
