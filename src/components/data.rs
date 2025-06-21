@@ -61,32 +61,27 @@ pub const CONTACT_LINKS: &[ContactLink] = &[
     // },
 ];
 
-pub struct SkillCategory<'a> {
+pub struct Skill<'a> {
     pub label: &'a str,
-    pub skills: &'a str,
 }
 
-pub const SKILL_CATEGORIES: &[SkillCategory] = &[
-    SkillCategory {
-        label: "Languages:",
-        skills: "Rust, JavaScript/TypeScript, Java",
-    },
-    SkillCategory {
-        label: "Front-End:",
-        skills: "React, Next.js, Redux, WebAssembly",
-    },
-    SkillCategory {
-        label: "Back-End / Cloud:",
-        skills: "AWS (SDK), PostgreSQL, REST/GraphQL, Spring MVC",
-    },
-    SkillCategory {
-        label: "DevOps / IaC:",
-        skills: "Terraform, Docker, Git, Linux/macOS CLI",
-    },
-    SkillCategory {
-        label: "AI:",
-        skills: "Vercel AI SDK",
-    },
+pub const SKILL: &[Skill] = &[
+    Skill { label: "Rust" },
+    Skill { label: "JavaScript/TypeScript" },
+    Skill { label: "Java" },
+    Skill { label: "React" },
+    Skill { label: "Next.js" },
+    Skill { label: "Redux" },
+    Skill { label: "WebAssembly" },
+    Skill { label: "AWS (SDK)" },
+    Skill { label: "PostgreSQL" },
+    Skill { label: "REST/GraphQL" },
+    Skill { label: "Spring MVC" },
+    Skill { label: "Terraform" },
+    Skill { label: "Docker" },
+    Skill { label: "Git" },
+    Skill { label: "Linux/macOS CLI" },
+    Skill { label: "Vercel AI SDK" },
 ];
 
 pub struct CareerEntry<'a> {
@@ -172,23 +167,23 @@ pub struct EducationEntry<'a> {
 
 pub const EDUCATION: &[EducationEntry] = &[
     EducationEntry {
-        title: "Java Fundamentals:",
+        title: "Java Fundamentals — ",
         institution: "MaxPlus",
     },
     EducationEntry {
-        title: "React & JavaScript:",
+        title: "React & JavaScript — ",
         institution: "Camplight",
     },
     EducationEntry {
-        title: "M.Eng., Engineering:",
+        title: "M.Eng., Engineering — ",
         institution: "University of Forestry",
     },
     EducationEntry {
-        title: "PhD, Theology:",
+        title: "PhD, Theology — ",
         institution: "Sofia University “St. Kliment Ohridski”",
     },
     EducationEntry {
-        title: "Mathematics:",
+        title: "Mathematics — ",
         institution: "High School of Mathematics",
     },
 ];
@@ -200,23 +195,23 @@ pub struct Language<'a> {
 
 pub const LANGUAGES: &[Language] = &[
     Language {
-        name: "Bulgarian:",
-        level: "Native",
+        name: "Bulgarian",
+        level: "(Native)",
     },
     Language {
-        name: "English:",
-        level: "C1",
+        name: "English",
+        level: "(C1)",
     },
     Language {
-        name: "Italian:",
-        level: "B2",
+        name: "Italian",
+        level: "(B2)",
     },
     Language {
-        name: "Russian:",
-        level: "B1",
+        name: "Russian",
+        level: "(B1)",
     },
     Language {
-        name: "Greek:",
-        level: "A2",
+        name: "Greek",
+        level: "(A2)",
     },
 ];

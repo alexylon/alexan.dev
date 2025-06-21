@@ -3,9 +3,6 @@
     --spacing-sm: 10px;
     --spacing-md: 20px;
     --spacing-lg: 40px;
-    --width-skill: 170px;
-    --width-education: 200px;
-    --width-language: 110px;
     --color-border: #bdae93;
     --color-bg-gradient-1: #ebdbb2;
     --color-bg-gradient-2: transparent;
@@ -35,7 +32,7 @@ body {
     line-height: 1.5rem;
     margin: 0;
     word-wrap: break-word;
-    font-family: 'Schibsted Grotesk', sans-serif;
+    font-family: 'Montserrat', sans-serif;
 }
 
 main {
@@ -60,7 +57,7 @@ h1 {
 }
 
 h1 + * {
-    margin-top: 5px;
+    margin-top: var(--spacing-xs);
 }
 
 h2 {
@@ -70,7 +67,7 @@ h2 {
 }
 
 h4 {
-    margin-left: var(--spacing-sm);
+    margin-left: var(--spacing-xs);
 }
 
 blockquote {
@@ -85,58 +82,44 @@ footer {
 }
 
 ul {
-    padding-inline-start: var(--spacing-sm);
+    padding-inline-start: var(--spacing-md);
+}
+
+.list-disc {
+    list-style-type: disc;
 }
 
 ul > li {
     position: relative;
     margin-bottom: var(--spacing-xs);
-    list-style-type: none;
-    padding-left: 1.2em;
-}
-
-ul > li::before {
-    content: "• ";
-    position: absolute;
-    left: 0;
-    top: 0;
-}
-
-.skill-list li,
-.languages-list li,
-.education-list li {
-    display: flex;
-    justify-content: flex-start;
-}
-
-.skill-list li span:first-child {
-    width: var(--width-skill);
-    flex-shrink: 0;
+    padding-left: var(--spacing-xs);
 }
 
 .education-list li span:first-child {
-    width: var(--width-education);
-    flex-shrink: 0;
-    font-weight: 700;
+    font-weight: 500;
 }
 
 .languages-list li span:first-child {
-    width: var(--width-language);
-    flex-shrink: 0;
-    font-weight: 700;
-}
-
-.skill-list li span:nth-child(2) {
-    font-weight: 700;
+    margin-right: var(--spacing-xs);
+    font-weight: 500;
 }
 
 .career-list {
-    list-style-type: none;
     max-width: 550px;
 }
 
 .career-list li {
     display: flex;
+}
+
+.chip {
+    margin: 0.5rem;
+    padding: 0.5rem;
+    font-size: 0.875rem;
+    border: none;
+    border-radius: 8px;
+    display: inline-block;
+    font-weight: 500;
 }
 
 .nav-links {
@@ -185,7 +168,7 @@ hr {
     float: left;
     height: 120px;
     margin-right: var(--spacing-md);
-    margin-top: var(--spacing-xs);
+    margin-top: var(--spacing-sm);
 }
 
 .container {
@@ -195,20 +178,6 @@ hr {
 
 .theme-switch {
     margin-top: 17px;
-}
-
-@media (max-width: 700px) {
-    .skill-list li {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-}
-
-@media (max-width: 660px) {
-    .education-list li {
-        flex-direction: column;
-        align-items: flex-start;
-    }
 }
 
 .go-to-top {

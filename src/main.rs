@@ -56,6 +56,13 @@ impl Theme {
             Theme::Light => asset!("/assets/icons/keyboard_arrow_up_dark.svg"),
         }
     }
+
+    fn chip_bg_color(&self) -> &'static str {
+        match self {
+            Theme::Dark => "#3C3835",
+            Theme::Light => "#D9D1B0",
+        }
+    }
 }
 
 #[component]
@@ -83,7 +90,7 @@ fn App() -> Element {
         }
         link {
             rel: "stylesheet",
-            href: "https://fonts.googleapis.com/css2?family=Podkova:wght@400..800&family=Schibsted+Grotesk:ital,wght@0,400..900;1,400..900&display=swap",
+            href: "https://fonts.googleapis.com/css2?family=Podkova:wght@400..800&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap",
             rel: "stylesheet"
         }
         document::Title { "Alexander" }
@@ -95,7 +102,7 @@ fn App() -> Element {
             // NavSection { theme }
             HeaderSection { theme }
             AboutSection {}
-            SkillsSection {}
+            SkillsSection { theme }
             CareerSection {}
             ProjectsSection {}
             EducationSection {}

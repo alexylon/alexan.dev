@@ -9,11 +9,11 @@ pub fn CareerSection() -> Element {
             h2 { "Career History" }
             {CAREER_ENTRIES.iter().map(|entry| rsx! {
                 h4 {
-                    b { "{entry.title}" },
+                    "{entry.title}",
                     i { " • {entry.company_and_period}" }
                 }
                 ul {
-                    class: "list",
+                    class: "list-disc",
                     {entry.responsibilities.iter().map(|desc| rsx! {
                         li { span { "{desc}" } }
                     })}

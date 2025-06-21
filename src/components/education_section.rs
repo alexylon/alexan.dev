@@ -8,7 +8,7 @@ pub fn EducationSection() -> Element {
             class: "education",
             h2 { "Education" }
             ul {
-                class: "education-list",
+                class: "education-list list-disc",
                 {
                     EDUCATION.iter().map(|ed| rsx! {
                         li {

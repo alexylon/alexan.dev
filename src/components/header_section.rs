@@ -23,7 +23,6 @@ pub fn HeaderSection(theme: Signal<Theme>) -> Element {
                     }
                 }
             }
-            br {}
 
             p {
                 class: "get-in-touch",

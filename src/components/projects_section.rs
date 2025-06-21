@@ -8,6 +8,7 @@ pub fn ProjectsSection() -> Element {
             class: "projects",
             h2 { "Selected Projects" }
             ul {
+                class: "list-disc",
                 {
                     PROJECTS.iter().map(|project| rsx! {
                         li {

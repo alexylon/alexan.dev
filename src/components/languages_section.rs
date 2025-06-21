@@ -8,7 +8,7 @@ pub fn LanguagesSection() -> Element {
             class: "languages",
             h2 { "Spoken Languages" }
             ul {
-                class: "languages-list",
+                class: "languages-list list-disc",
                 {
                     LANGUAGES.iter().map(|lang| rsx! {
                         li {
