@@ -6,7 +6,7 @@ pub fn SkillsSection() -> Element {
     rsx! {
         section {
             class: "skills",
-            h3 { "## Key Tech Skills" }
+            h2 { "Key Tech Skills" }
             ul {
                 class: "skill-list",
                 {

@@ -6,7 +6,7 @@ pub fn ProjectsSection() -> Element {
     rsx! {
         section {
             class: "projects",
-            h3 { "## Selected Projects" }
+            h2 { "Selected Projects" }
             ul {
                 {
                     PROJECTS.iter().map(|project| rsx! {

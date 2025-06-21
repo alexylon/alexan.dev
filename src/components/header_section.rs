@@ -10,8 +10,8 @@ pub fn HeaderSection(theme: Signal<Theme>) -> Element {
             div {
                 class: "container",
                 div {
-                    h2 { "{PROFILE.name}" }
-                    h4 { "{PROFILE.title}" }
+                    h1 { "{PROFILE.name}" }
+                    h3 { "{PROFILE.title}" }
                 }
                 a {
                     class: "theme-switch",

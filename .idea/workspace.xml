@@ -11,21 +11,16 @@
     </cargoProject>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b3157e2f-fd07-489e-b2a5-8b49df018d62" name="Changes" comment="Create go_to_top component. Bundle font. Restyle lists">
+    <list default="true" id="b3157e2f-fd07-489e-b2a5-8b49df018d62" name="Changes" comment="Implement scroll-to-top in the dioxus way. Refactor">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Cargo.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Cargo.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Cargo.toml" beforeDir="false" afterPath="$PROJECT_DIR$/Cargo.toml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/fonts/JetBrainsMono-Regular.woff2" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/styling/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/styling/index.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/about_section.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/about_section.rs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/career_section.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/career_section.rs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/certifications_section.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/certifications_section.rs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/data.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/data.rs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/education_section.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/education_section.rs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/go_to_top.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/scroll_to_top.rs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/header_section.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/header_section.rs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/languages_section.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/languages_section.rs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/mod.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/mod.rs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/nav_section.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/nav_section.rs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/projects_section.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/projects_section.rs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/skills_section.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/skills_section.rs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.rs" afterDir="false" />
@@ -70,7 +65,7 @@
     &quot;RunOnceActivity.rust.reset.selective.auto.import&quot;: &quot;true&quot;,
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/alex/git/aal/alexandroff.dev/assets/icons&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/alex/git/aal/alexandroff.dev/assets/fonts&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -84,8 +79,8 @@
 }</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/assets/icons" />
       <recent name="$PROJECT_DIR$/assets/fonts" />
+      <recent name="$PROJECT_DIR$/assets/icons" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/assets/icons" />
@@ -145,7 +140,8 @@
       <workItem from="1750326956019" duration="9595000" />
       <workItem from="1750344919696" duration="8203000" />
       <workItem from="1750421916585" duration="5089000" />
-      <workItem from="1750430844070" duration="6551000" />
+      <workItem from="1750430844070" duration="6866000" />
+      <workItem from="1750496418083" duration="2507000" />
     </task>
     <task id="LOCAL-00001" summary="Separate components into individual files. Update content">
       <option name="closed" value="true" />
@@ -171,7 +167,15 @@
       <option name="project" value="LOCAL" />
       <updated>1750352614062</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Implement scroll-to-top in the dioxus way. Refactor">
+      <option name="closed" value="true" />
+      <created>1750438630349</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1750438630349</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -181,6 +185,7 @@
     <MESSAGE value="Separate components into individual files. Update content" />
     <MESSAGE value="Refactor. Update content" />
     <MESSAGE value="Create go_to_top component. Bundle font. Restyle lists" />
-    <option name="LAST_COMMIT_MESSAGE" value="Create go_to_top component. Bundle font. Restyle lists" />
+    <MESSAGE value="Implement scroll-to-top in the dioxus way. Refactor" />
+    <option name="LAST_COMMIT_MESSAGE" value="Implement scroll-to-top in the dioxus way. Refactor" />
   </component>
 </project>

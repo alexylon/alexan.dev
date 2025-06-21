@@ -6,7 +6,7 @@ pub fn EducationSection() -> Element {
     rsx! {
         section {
             class: "education",
-            h3 { "## Education" }
+            h2 { "Education" }
             ul {
                 class: "education-list",
                 {

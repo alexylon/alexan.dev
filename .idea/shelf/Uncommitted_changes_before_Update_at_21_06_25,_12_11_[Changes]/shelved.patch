@@ -1,0 +1,177 @@
+Index: src/main.rs
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>use dioxus::prelude::*;\nuse std::rc::Rc;\n\nmod components;\nuse components::*;\n\nfn main() {\n    LaunchBuilder::new().launch(App);\n}\n\n#[derive(Clone, Copy, PartialEq)]\nenum Theme {\n    Dark,\n    Light,\n}\n\nimpl Theme {\n    fn css_class(&self) -> &'static str {\n        match self {\n            Theme::Dark => \"gruvbox-dark\",\n            Theme::Light => \"gruvbox-light\",\n        }\n    }\n\n    fn css_file(&self) -> Asset {\n        match self {\n            Theme::Dark => asset!(\"/assets/styling/gruvbox-dark.css\"),\n            Theme::Light => asset!(\"/assets/styling/gruvbox-light.css\"),\n        }\n    }\n\n    fn toggle_text(&self) -> &'static str {\n        match self {\n            Theme::Dark => \"Jedi\",\n            Theme::Light => \"Sith\",\n        }\n    }\n\n    fn toggle(&self) -> Self {\n        match self {\n            Theme::Dark => Theme::Light,\n            Theme::Light => Theme::Dark,\n        }\n    }\n\n    fn icon_theme(&self) -> Asset {\n        match self {\n            Theme::Dark => asset!(\"/assets/icons/light_mode.svg\"),\n            Theme::Light => asset!(\"/assets/icons/dark_mode.svg\"),\n        }\n    }\n\n    fn icon_up(&self) -> Asset {\n        match self {\n            Theme::Dark => asset!(\"/assets/icons/keyboard_arrow_up_light.svg\"),\n            Theme::Light => asset!(\"/assets/icons/keyboard_arrow_up_dark.svg\"),\n        }\n    }\n}\n\n#[component]\nfn App() -> Element {\n    let theme = use_signal(|| Theme::Dark);\n    let mut top_element: Signal<Option<Rc<MountedData>>> = use_signal(|| None);\n    let font_url = asset!(\"/assets/fonts/JetBrainsMono-Regular.woff2\");\n    let font_css = format!(\n        \"@font-face {{\n            font-family: 'JetBrains Mono';\n            src: url('{}') format('woff2');\n            font-weight: normal;\n            font-style: normal;\n            font-display: swap;\n        }}\n        body {{\n            font-family: 'JetBrains Mono', monospace;\n        }}\",\n        font_url\n    );\n\n    rsx! {\n        document::Link {\n            rel: \"stylesheet\",\n            href: asset!(\"/assets/styling/index.css\")\n        }\n        link {\n            rel: \"stylesheet\",\n            href: theme().css_file(),\n            class: \"theme-css\"\n        }\n        style {\n            \"{font_css}\"\n        }\n        document::Title { \"Alexander\" }\n\n        main {\n            class: \"{theme().css_class()}\",\n            class: \"top\",\n            onmounted: move |cx| top_element.set(Some(cx.data())),\n            // NavSection { theme }\n            HeaderSection { theme }\n            AboutSection {}\n            SkillsSection {}\n            CareerSection {}\n            ProjectsSection {}\n            EducationSection {}\n            CertificationsSection {}\n            LanguagesSection {}\n            FooterSection {}\n            ScrollToTop { top_element }\n        }\n    }\n}\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main.rs b/src/main.rs
+--- a/src/main.rs	(revision b6edced11e9028d938cb53d080820e17175af14e)
++++ b/src/main.rs	(date 1750497006029)
+@@ -62,18 +62,16 @@
+ fn App() -> Element {
+     let theme = use_signal(|| Theme::Dark);
+     let mut top_element: Signal<Option<Rc<MountedData>>> = use_signal(|| None);
+-    let font_url = asset!("/assets/fonts/JetBrainsMono-Regular.woff2");
++    let font_url = asset!("/assets/fonts/SchibstedGrotesk-Regular.ttf");
+     let font_css = format!(
+         "@font-face {{
+-            font-family: 'JetBrains Mono';
+-            src: url('{}') format('woff2');
++            font-family: 'Schibsted Grotesk';
++            src: url('{}') format('truetype');
+             font-weight: normal;
+             font-style: normal;
+             font-display: swap;
+         }}
+-        body {{
+-            font-family: 'JetBrains Mono', monospace;
+-        }}",
++        ",
+         font_url
+     );
+ 
+Index: assets/styling/index.css
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>:root {\n    --spacing-xs: 5px;\n    --spacing-sm: 10px;\n    --spacing-md: 20px;\n    --spacing-lg: 40px;\n    --width-skill: 170px;\n    --width-education: 200px;\n    --width-language: 110px;\n    --color-border: #bdae93;\n    --color-bg-gradient-1: #ebdbb2;\n    --color-bg-gradient-2: transparent;\n    --color-button-bg: rgba(45, 85, 88, 0.7);\n    --color-button-bg-hover: rgba(45, 85, 88, 0.9);\n    --color-button-shadow: rgba(45, 85, 88, 0.3);\n    --color-button-shadow-hover: rgba(45, 85, 88, 0.4);\n    --color-button-focus: rgba(45, 85, 88, 0.5);\n}\n\n* {\n    box-sizing: border-box;\n    text-rendering: geometricPrecision;\n    -webkit-text-size-adjust: 100%;\n    -moz-text-size-adjust: 100%;\n    -ms-text-size-adjust: 100%;\n    text-size-adjust: 100%;\n}\n\nhtml {\n    scroll-behavior: smooth;\n    font-size: 15px;\n}\n\nbody {\n    font-size: 1rem;\n    line-height: 1.5rem;\n    margin: 0;\n    word-wrap: break-word;\n}\n\nmain {\n    max-width: 60rem;\n    padding: 2rem;\n    margin: auto;\n}\n\n@media only screen and (max-device-width: 736px) {\n    main {\n        padding: 1rem;\n    }\n}\n\nh1, h4, h5 {\n    margin-bottom: var(--spacing-xs);\n}\n\nh2 {\n    margin-bottom: 0;\n}\n\nh2 + * {\n    margin-top: 5px;\n}\n\nh3 {\n    margin-top: var(--spacing-lg);\n    margin-bottom: var(--spacing-sm);\n}\n\nh4 {\n    margin-left: var(--spacing-sm);\n}\n\nblockquote {\n    border-left: 1px solid var(--color-border);\n    margin: 0.5em var(--spacing-sm);\n    padding: 0.5em var(--spacing-sm);\n}\n\nfooter {\n    text-align: center;\n    margin-top: var(--spacing-lg);\n}\n\nul {\n    padding-inline-start: var(--spacing-sm);\n}\n\nul > li {\n    position: relative;\n    margin-bottom: var(--spacing-xs);\n    list-style-type: none;\n    padding-left: 1.2em;\n}\n\nul > li::before {\n    content: \"• \";\n    position: absolute;\n    left: 0;\n    top: 0;\n}\n\n.skill-list li,\n.languages-list li,\n.education-list li {\n    display: flex;\n    justify-content: flex-start;\n}\n\n.skill-list li span:first-child {\n    width: var(--width-skill);\n    flex-shrink: 0;\n}\n\n.education-list li span:first-child {\n    width: var(--width-education);\n    flex-shrink: 0;\n    font-weight: 700;\n}\n\n.languages-list li span:first-child {\n    width: var(--width-language);\n    flex-shrink: 0;\n    font-weight: 700;\n}\n\n.skill-list li span:nth-child(2) {\n    font-weight: 700;\n}\n\n.career-list {\n    list-style-type: none;\n    max-width: 550px;\n}\n\n.career-list li {\n    display: flex;\n}\n\n.nav-links {\n    display: flex;\n    justify-content: space-between;\n}\n\n.nav-links span {\n    margin: 0 var(--spacing-xs);\n}\n\nhr {\n    margin: 1.875em 0;\n    border: none;\n    border-bottom: solid 1px #000000;\n}\n\n.dashed {\n    border: none;\n    height: 1px;\n    background: repeating-linear-gradient(90deg, var(--color-bg-gradient-1), var(--color-bg-gradient-1) 6px, var(--color-bg-gradient-2) 2px, var(--color-bg-gradient-2) 8px);\n}\n\n.get-in-touch {\n    display: flex;\n    justify-content: space-between;\n}\n\n.get-in-touch span {\n    margin: 0 var(--spacing-xs);\n}\n\n.about-me {\n    position: relative;\n    overflow: hidden;\n}\n\n.about-me::after {\n    content: \"\";\n    display: block;\n    clear: both;\n    height: 0;\n}\n\n.about-me img {\n    float: left;\n    height: 120px;\n    margin-right: var(--spacing-md);\n    margin-top: var(--spacing-xs);\n}\n\n.container {\n    display: flex;\n    justify-content: space-between;\n}\n\n.theme-switch {\n    margin-top: 17px;\n}\n\n@media (max-width: 700px) {\n    .skill-list li {\n        flex-direction: column;\n        align-items: flex-start;\n    }\n}\n\n@media (max-width: 660px) {\n    .education-list li {\n        flex-direction: column;\n        align-items: flex-start;\n    }\n}\n\n.go-to-top {\n    position: fixed;\n    bottom: 30px;\n    right: 30px;\n    z-index: 1000;\n    background-color: var(--color-button-bg);\n    border: none;\n    border-radius: 50%;\n    padding: 12px;\n    box-shadow: 0 4px 12px var(--color-button-shadow);\n    transition: all 0.3s ease;\n    opacity: 0.8;\n    display: flex;\n    align-items: center;\n    justify-content: center;\n    width: 48px;\n    height: 48px;\n    cursor: pointer;\n\n    /* Fix for mobile Safari tap highlights */\n    -webkit-tap-highlight-color: transparent;\n    -webkit-user-select: none;\n    -moz-user-select: none;\n    -ms-user-select: none;\n    user-select: none;\n}\n\n/* Only apply hover effects on devices that can actually hover */\n@media (hover: hover) and (pointer: fine) {\n    .go-to-top:hover {\n        opacity: 1;\n        transform: translateY(-2px);\n        box-shadow: 0 6px 16px var(--color-button-shadow-hover);\n        background-color: var(--color-button-bg-hover);\n    }\n}\n\n.go-to-top:focus {\n    box-shadow: 0 0 0 2px var(--color-button-focus);\n}\n\n.go-to-top img {\n    display: block;\n    width: 36px;\n    height: 36px;\n}\n\n.go-to-top.hidden {\n    display: none;\n}\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/assets/styling/index.css b/assets/styling/index.css
+--- a/assets/styling/index.css	(revision b6edced11e9028d938cb53d080820e17175af14e)
++++ b/assets/styling/index.css	(date 1750496999511)
+@@ -35,6 +35,7 @@
+     line-height: 1.5rem;
+     margin: 0;
+     word-wrap: break-word;
++    font-family: 'Schibsted Grotesk', sans-serif;
+ }
+ 
+ main {
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<project version=\"4\">\n  <component name=\"AutoImportSettings\">\n    <option name=\"autoReloadType\" value=\"ALL\" />\n  </component>\n  <component name=\"CargoProjects\">\n    <cargoProject FILE=\"$PROJECT_DIR$/Cargo.toml\">\n      <package file=\"$PROJECT_DIR$\">\n        <enabledFeature name=\"default\" />\n      </package>\n    </cargoProject>\n  </component>\n  <component name=\"ChangeListManager\">\n    <list default=\"true\" id=\"b3157e2f-fd07-489e-b2a5-8b49df018d62\" name=\"Changes\" comment=\"Create go_to_top component. Bundle font. Restyle lists\">\n      <change beforePath=\"$PROJECT_DIR$/.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/workspace.xml\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/Cargo.lock\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/Cargo.lock\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/Cargo.toml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/Cargo.toml\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/assets/styling/index.css\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/assets/styling/index.css\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/src/components/about_section.rs\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/components/about_section.rs\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/src/components/career_section.rs\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/components/career_section.rs\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/src/components/certifications_section.rs\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/components/certifications_section.rs\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/src/components/data.rs\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/components/data.rs\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/src/components/education_section.rs\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/components/education_section.rs\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/src/components/go_to_top.rs\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/components/scroll_to_top.rs\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/src/components/header_section.rs\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/components/header_section.rs\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/src/components/languages_section.rs\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/components/languages_section.rs\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/src/components/mod.rs\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/components/mod.rs\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/src/components/nav_section.rs\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/components/nav_section.rs\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/src/components/projects_section.rs\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/components/projects_section.rs\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/src/components/skills_section.rs\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/components/skills_section.rs\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/src/main.rs\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main.rs\" afterDir=\"false\" />\n    </list>\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\n  </component>\n  <component name=\"ExecutionTargetManager\" SELECTED_TARGET=\"RsBuildProfile:dev\" />\n  <component name=\"FileTemplateManagerImpl\">\n    <option name=\"RECENT_TEMPLATES\">\n      <list>\n        <option value=\"Rust File\" />\n      </list>\n    </option>\n  </component>\n  <component name=\"Git.Settings\">\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\n  </component>\n  <component name=\"MacroExpansionManager\">\n    <option name=\"directoryName\" value=\"7qPdBQiQ\" />\n  </component>\n  <component name=\"ProjectColorInfo\">{\n  &quot;customColor&quot;: &quot;&quot;,\n  &quot;associatedIndex&quot;: 3\n}</component>\n  <component name=\"ProjectId\" id=\"2yJv0ObeXCljtcGZ4rWaJxDZYRx\" />\n  <component name=\"ProjectLevelVcsManager\">\n    <OptionsSetting value=\"false\" id=\"Update\" />\n  </component>\n  <component name=\"ProjectViewState\">\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\n    <option name=\"showLibraryContents\" value=\"true\" />\n  </component>\n  <component name=\"PropertiesComponent\">{\n  &quot;keyToString&quot;: {\n    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,\n    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,\n    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,\n    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,\n    &quot;RunOnceActivity.rust.reset.selective.auto.import&quot;: &quot;true&quot;,\n    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,\n    &quot;git-widget-placeholder&quot;: &quot;main&quot;,\n    &quot;last_opened_file_path&quot;: &quot;/Users/alex/git/aal/alexandroff.dev/assets/icons&quot;,\n    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,\n    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,\n    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,\n    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,\n    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,\n    &quot;org.rust.cargo.project.model.PROJECT_DISCOVERY&quot;: &quot;true&quot;,\n    &quot;org.rust.cargo.project.model.impl.CargoExternalSystemProjectAware.subscribe.first.balloon&quot;: &quot;&quot;,\n    &quot;org.rust.first.attach.projects&quot;: &quot;true&quot;,\n    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;\n  }\n}</component>\n  <component name=\"RecentsManager\">\n    <key name=\"CopyFile.RECENT_KEYS\">\n      <recent name=\"$PROJECT_DIR$/assets/icons\" />\n      <recent name=\"$PROJECT_DIR$/assets/fonts\" />\n    </key>\n    <key name=\"MoveFile.RECENT_KEYS\">\n      <recent name=\"$PROJECT_DIR$/assets/icons\" />\n    </key>\n  </component>\n  <component name=\"RunManager\" selected=\"Cargo.Run alexandroff-dev\">\n    <configuration name=\"Run alexandroff-dev\" type=\"CargoCommandRunConfiguration\" factoryName=\"Cargo Command\">\n      <option name=\"buildProfileId\" value=\"dev\" />\n      <option name=\"command\" value=\"run --package alexandroff-dev --bin alexandroff-dev\" />\n      <option name=\"workingDirectory\" value=\"file://$PROJECT_DIR$\" />\n      <envs />\n      <option name=\"emulateTerminal\" value=\"true\" />\n      <option name=\"channel\" value=\"DEFAULT\" />\n      <option name=\"requiredFeatures\" value=\"true\" />\n      <option name=\"allFeatures\" value=\"false\" />\n      <option name=\"withSudo\" value=\"false\" />\n      <option name=\"buildTarget\" value=\"REMOTE\" />\n      <option name=\"backtrace\" value=\"SHORT\" />\n      <option name=\"isRedirectInput\" value=\"false\" />\n      <option name=\"redirectInputPath\" value=\"\" />\n      <method v=\"2\">\n        <option name=\"CARGO.BUILD_TASK_PROVIDER\" enabled=\"true\" />\n      </method>\n    </configuration>\n    <configuration name=\"Test alexandroff-dev\" type=\"CargoCommandRunConfiguration\" factoryName=\"Cargo Command\">\n      <option name=\"command\" value=\"test --workspace\" />\n      <option name=\"workingDirectory\" value=\"file://$PROJECT_DIR$\" />\n      <envs />\n      <option name=\"emulateTerminal\" value=\"true\" />\n      <option name=\"channel\" value=\"DEFAULT\" />\n      <option name=\"requiredFeatures\" value=\"true\" />\n      <option name=\"allFeatures\" value=\"false\" />\n      <option name=\"withSudo\" value=\"false\" />\n      <option name=\"buildTarget\" value=\"REMOTE\" />\n      <option name=\"backtrace\" value=\"SHORT\" />\n      <option name=\"isRedirectInput\" value=\"false\" />\n      <option name=\"redirectInputPath\" value=\"\" />\n      <method v=\"2\">\n        <option name=\"CARGO.BUILD_TASK_PROVIDER\" enabled=\"true\" />\n      </method>\n    </configuration>\n  </component>\n  <component name=\"RustProjectSettings\">\n    <option name=\"toolchainHomeDirectory\" value=\"$USER_HOME$/.cargo/bin\" />\n  </component>\n  <component name=\"TaskManager\">\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\n      <changelist id=\"b3157e2f-fd07-489e-b2a5-8b49df018d62\" name=\"Changes\" comment=\"\" />\n      <created>1749565267498</created>\n      <option name=\"number\" value=\"Default\" />\n      <option name=\"presentableId\" value=\"Default\" />\n      <updated>1749565267498</updated>\n      <workItem from=\"1749565268859\" duration=\"8944000\" />\n      <workItem from=\"1750229815418\" duration=\"15861000\" />\n      <workItem from=\"1750250379291\" duration=\"4448000\" />\n      <workItem from=\"1750258667943\" duration=\"7147000\" />\n      <workItem from=\"1750326956019\" duration=\"9595000\" />\n      <workItem from=\"1750344919696\" duration=\"8203000\" />\n      <workItem from=\"1750421916585\" duration=\"5089000\" />\n      <workItem from=\"1750430844070\" duration=\"6551000\" />\n    </task>\n    <task id=\"LOCAL-00001\" summary=\"Separate components into individual files. Update content\">\n      <option name=\"closed\" value=\"true\" />\n      <created>1749575748731</created>\n      <option name=\"number\" value=\"00001\" />\n      <option name=\"presentableId\" value=\"LOCAL-00001\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1749575748731</updated>\n    </task>\n    <task id=\"LOCAL-00002\" summary=\"Refactor. Update content\">\n      <option name=\"closed\" value=\"true\" />\n      <created>1750266957976</created>\n      <option name=\"number\" value=\"00002\" />\n      <option name=\"presentableId\" value=\"LOCAL-00002\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1750266957976</updated>\n    </task>\n    <task id=\"LOCAL-00003\" summary=\"Create go_to_top component. Bundle font. Restyle lists\">\n      <option name=\"closed\" value=\"true\" />\n      <created>1750352614062</created>\n      <option name=\"number\" value=\"00003\" />\n      <option name=\"presentableId\" value=\"LOCAL-00003\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1750352614062</updated>\n    </task>\n    <option name=\"localTasksCounter\" value=\"4\" />\n    <servers />\n  </component>\n  <component name=\"TypeScriptGeneratedFilesManager\">\n    <option name=\"version\" value=\"3\" />\n  </component>\n  <component name=\"VcsManagerConfiguration\">\n    <MESSAGE value=\"Separate components into individual files. Update content\" />\n    <MESSAGE value=\"Refactor. Update content\" />\n    <MESSAGE value=\"Create go_to_top component. Bundle font. Restyle lists\" />\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"Create go_to_top component. Bundle font. Restyle lists\" />\n  </component>\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision b6edced11e9028d938cb53d080820e17175af14e)
++++ b/.idea/workspace.xml	(date 1750497020155)
+@@ -11,23 +11,10 @@
+     </cargoProject>
+   </component>
+   <component name="ChangeListManager">
+-    <list default="true" id="b3157e2f-fd07-489e-b2a5-8b49df018d62" name="Changes" comment="Create go_to_top component. Bundle font. Restyle lists">
++    <list default="true" id="b3157e2f-fd07-489e-b2a5-8b49df018d62" name="Changes" comment="Implement scroll-to-top in the dioxus way. Refactor">
++      <change afterPath="$PROJECT_DIR$/assets/fonts/SchibstedGrotesk-Regular.ttf" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/Cargo.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Cargo.lock" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/Cargo.toml" beforeDir="false" afterPath="$PROJECT_DIR$/Cargo.toml" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/assets/styling/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/styling/index.css" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/components/about_section.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/about_section.rs" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/components/career_section.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/career_section.rs" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/components/certifications_section.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/certifications_section.rs" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/components/data.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/data.rs" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/components/education_section.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/education_section.rs" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/components/go_to_top.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/scroll_to_top.rs" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/components/header_section.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/header_section.rs" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/components/languages_section.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/languages_section.rs" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/components/mod.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/mod.rs" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/components/nav_section.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/nav_section.rs" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/components/projects_section.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/projects_section.rs" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/components/skills_section.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/skills_section.rs" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/src/main.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.rs" afterDir="false" />
+     </list>
+     <option name="SHOW_DIALOG" value="false" />
+@@ -61,31 +48,31 @@
+     <option name="hideEmptyMiddlePackages" value="true" />
+     <option name="showLibraryContents" value="true" />
+   </component>
+-  <component name="PropertiesComponent">{
+-  &quot;keyToString&quot;: {
+-    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+-    &quot;RunOnceActivity.rust.reset.selective.auto.import&quot;: &quot;true&quot;,
+-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+-    &quot;last_opened_file_path&quot;: &quot;/Users/alex/git/aal/alexandroff.dev/assets/icons&quot;,
+-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+-    &quot;org.rust.cargo.project.model.PROJECT_DISCOVERY&quot;: &quot;true&quot;,
+-    &quot;org.rust.cargo.project.model.impl.CargoExternalSystemProjectAware.subscribe.first.balloon&quot;: &quot;&quot;,
+-    &quot;org.rust.first.attach.projects&quot;: &quot;true&quot;,
+-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
++  <component name="PropertiesComponent"><![CDATA[{
++  "keyToString": {
++    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
++    "ModuleVcsDetector.initialDetectionPerformed": "true",
++    "RunOnceActivity.ShowReadmeOnStart": "true",
++    "RunOnceActivity.git.unshallow": "true",
++    "RunOnceActivity.rust.reset.selective.auto.import": "true",
++    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
++    "git-widget-placeholder": "main",
++    "last_opened_file_path": "/Users/alex/git/aal/alexandroff.dev/assets/fonts",
++    "node.js.detected.package.eslint": "true",
++    "node.js.detected.package.tslint": "true",
++    "node.js.selected.package.eslint": "(autodetect)",
++    "node.js.selected.package.tslint": "(autodetect)",
++    "nodejs_package_manager_path": "npm",
++    "org.rust.cargo.project.model.PROJECT_DISCOVERY": "true",
++    "org.rust.cargo.project.model.impl.CargoExternalSystemProjectAware.subscribe.first.balloon": "",
++    "org.rust.first.attach.projects": "true",
++    "vue.rearranger.settings.migration": "true"
+   }
+-}</component>
++}]]></component>
+   <component name="RecentsManager">
+     <key name="CopyFile.RECENT_KEYS">
++      <recent name="$PROJECT_DIR$/assets/fonts" />
+       <recent name="$PROJECT_DIR$/assets/icons" />
+-      <recent name="$PROJECT_DIR$/assets/fonts" />
+     </key>
+     <key name="MoveFile.RECENT_KEYS">
+       <recent name="$PROJECT_DIR$/assets/icons" />
+@@ -145,7 +132,8 @@
+       <workItem from="1750326956019" duration="9595000" />
+       <workItem from="1750344919696" duration="8203000" />
+       <workItem from="1750421916585" duration="5089000" />
+-      <workItem from="1750430844070" duration="6551000" />
++      <workItem from="1750430844070" duration="6866000" />
++      <workItem from="1750496418083" duration="601000" />
+     </task>
+     <task id="LOCAL-00001" summary="Separate components into individual files. Update content">
+       <option name="closed" value="true" />
+@@ -171,7 +159,15 @@
+       <option name="project" value="LOCAL" />
+       <updated>1750352614062</updated>
+     </task>
+-    <option name="localTasksCounter" value="4" />
++    <task id="LOCAL-00004" summary="Implement scroll-to-top in the dioxus way. Refactor">
++      <option name="closed" value="true" />
++      <created>1750438630349</created>
++      <option name="number" value="00004" />
++      <option name="presentableId" value="LOCAL-00004" />
++      <option name="project" value="LOCAL" />
++      <updated>1750438630349</updated>
++    </task>
++    <option name="localTasksCounter" value="5" />
+     <servers />
+   </component>
+   <component name="TypeScriptGeneratedFilesManager">
+@@ -181,6 +177,7 @@
+     <MESSAGE value="Separate components into individual files. Update content" />
+     <MESSAGE value="Refactor. Update content" />
+     <MESSAGE value="Create go_to_top component. Bundle font. Restyle lists" />
+-    <option name="LAST_COMMIT_MESSAGE" value="Create go_to_top component. Bundle font. Restyle lists" />
++    <MESSAGE value="Implement scroll-to-top in the dioxus way. Refactor" />
++    <option name="LAST_COMMIT_MESSAGE" value="Implement scroll-to-top in the dioxus way. Refactor" />
+   </component>
+ </project>
+\ No newline at end of file

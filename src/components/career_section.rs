@@ -6,7 +6,7 @@ pub fn CareerSection() -> Element {
     rsx! {
         section {
             class: "career",
-            h3 { "## Career History" }
+            h2 { "Career History" }
             {CAREER_ENTRIES.iter().map(|entry| rsx! {
                 h4 {
                     b { "{entry.title}" },

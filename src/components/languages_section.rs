@@ -6,7 +6,7 @@ pub fn LanguagesSection() -> Element {
     rsx! {
         section {
             class: "languages",
-            h3 { "## Spoken Languages" }
+            h2 { "Spoken Languages" }
             ul {
                 class: "languages-list",
                 {

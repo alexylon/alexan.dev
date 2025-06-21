@@ -5,7 +5,7 @@ pub fn CertificationsSection() -> Element {
     rsx! {
         section {
             class: "certification",
-            h3 { "## Certifications" }
+            h2 { "Certifications" }
             p {
                 a {
                     href: "https://www.credly.com/badges/13918dd1-e5ad-4e81-96c6-95fcb6fb8b3c",

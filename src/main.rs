@@ -62,20 +62,6 @@ impl Theme {
 fn App() -> Element {
     let theme = use_signal(|| Theme::Dark);
     let mut top_element: Signal<Option<Rc<MountedData>>> = use_signal(|| None);
-    let font_url = asset!("/assets/fonts/JetBrainsMono-Regular.woff2");
-    let font_css = format!(
-        "@font-face {{
-            font-family: 'JetBrains Mono';
-            src: url('{}') format('woff2');
-            font-weight: normal;
-            font-style: normal;
-            font-display: swap;
-        }}
-        body {{
-            font-family: 'JetBrains Mono', monospace;
-        }}",
-        font_url
-    );
 
     rsx! {
         document::Link {
@@ -87,8 +73,18 @@ fn App() -> Element {
             href: theme().css_file(),
             class: "theme-css"
         }
-        style {
-            "{font_css}"
+        link {
+            rel: "preconnect",
+            href: "https://fonts.googleapis.com",
+        }
+        link {
+            rel: "preconnect",
+            href: "https://fonts.gstatic.com",
+        }
+        link {
+            rel: "stylesheet",
+            href: "https://fonts.googleapis.com/css2?family=Podkova:wght@400..800&family=Schibsted+Grotesk:ital,wght@0,400..900;1,400..900&display=swap",
+            rel: "stylesheet"
         }
         document::Title { "Alexander" }
 
