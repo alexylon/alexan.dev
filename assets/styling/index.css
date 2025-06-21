@@ -33,6 +33,7 @@ body {
     margin: 0;
     word-wrap: break-word;
     font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
 }
 
 main {
@@ -54,6 +55,7 @@ h1, h4, h5 {
 h1 {
     margin-bottom: 0;
     font-family: 'Podkova', serif;
+    font-weight: 400;
 }
 
 h1 + * {
@@ -64,6 +66,7 @@ h2 {
     margin-top: var(--spacing-lg);
     margin-bottom: var(--spacing-sm);
     font-family: 'Podkova', serif;
+    font-weight: 400;
 }
 
 h4 {
@@ -96,12 +99,12 @@ ul > li {
 }
 
 .education-list li span:first-child {
-    font-weight: 500;
+    font-weight: 600;
 }
 
 .languages-list li span:first-child {
     margin-right: var(--spacing-xs);
-    font-weight: 500;
+    font-weight: 600;
 }
 
 .career-list {
@@ -119,7 +122,6 @@ ul > li {
     border: none;
     border-radius: 8px;
     display: inline-block;
-    font-weight: 500;
 }
 
 .nav-links {
