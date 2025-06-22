@@ -67,21 +67,29 @@ pub struct Skill<'a> {
 
 pub const SKILL: &[Skill] = &[
     Skill { label: "Rust" },
-    Skill { label: "JavaScript/TypeScript" },
+    Skill { label: "JavaScript" },
+    Skill { label: "TypeScript" },
     Skill { label: "Java" },
     Skill { label: "React" },
     Skill { label: "Next.js" },
     Skill { label: "Redux" },
     Skill { label: "WebAssembly" },
-    Skill { label: "AWS (SDK)" },
+    Skill { label: "Node.js" },
+    Skill { label: "ExtendScript" },
+    Skill { label: "Docker" },
+    Skill { label: "Vercel AI SDK" },
+    Skill { label: "AWS SDK" },
     Skill { label: "PostgreSQL" },
-    Skill { label: "REST/GraphQL" },
+    Skill { label: "REST APIs" },
+    Skill { label: "GraphQL" },
     Skill { label: "Spring MVC" },
     Skill { label: "Terraform" },
-    Skill { label: "Docker" },
     Skill { label: "Git" },
-    Skill { label: "Linux/macOS CLI" },
-    Skill { label: "Vercel AI SDK" },
+    Skill { label: "macOS CLI" },
+    Skill { label: "Linux CLI" },
+    Skill { label: "LLMs (GPT, Claude)" },
+    Skill { label: "JetBrains IDEs" },
+    Skill { label: "Helix Editor" },
 ];
 
 pub struct CareerEntry<'a> {
@@ -135,7 +143,7 @@ pub const PROJECTS: &[ProjectEntry] = &[
     },
     ProjectEntry {
         name: "Sofos",
-        description: "A multimodal AI chatbot in React/Next.js",
+        description: "A multimodal, multimodel AI chatbot in React/Next.js",
         url: "https://github.com/alexylon/Sofos",
     },
     ProjectEntry {
