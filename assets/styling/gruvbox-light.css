@@ -1,7 +1,7 @@
 /*General*/
 body:has(main.gruvbox-light) {
-    background: #fbf1c7;
-    color: #3c3836;
+    background: #f9f5d7;
+    color: #2d2021;
 }
 
 .gruvbox-light code pre {
