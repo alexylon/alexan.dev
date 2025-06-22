@@ -59,8 +59,8 @@ impl Theme {
 
     fn chip_bg_color(&self) -> &'static str {
         match self {
-            Theme::Dark => "#3C3835",
-            Theme::Light => "#D9D1B0",
+            Theme::Dark => "#3C3836",
+            Theme::Light => "#EBDBB2",
         }
     }
 }
