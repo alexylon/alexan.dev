@@ -21,16 +21,19 @@ body:has(main.gruvbox-dark) {
     color: #fabd2f;
 }
 
-.gruvbox-dark a:hover {
-    color: #f9f5d7;
-}
-
 .gruvbox-dark a:visited {
     color: #f38019;
 }
 
-.gruvbox-dark a:visited:hover {
-    color: #f9f5d7;
+/* Only apply hover effects on devices that can actually hover */
+@media (hover: hover) and (pointer: fine) {
+    .gruvbox-dark a:hover {
+        color: #f9f5d7;
+    }
+
+    .gruvbox-dark a:visited:hover {
+        color: #f9f5d7;
+    }
 }
 
 .gruvbox-dark pre {

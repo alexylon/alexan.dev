@@ -11,18 +11,10 @@
     </cargoProject>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b3157e2f-fd07-489e-b2a5-8b49df018d62" name="Changes" comment="Improve headings style">
-      <change afterPath="$PROJECT_DIR$/src/components/contact_section.rs" afterDir="false" />
+    <list default="true" id="b3157e2f-fd07-489e-b2a5-8b49df018d62" name="Changes" comment="Auto-detect device theme. Clean up CSS">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Cargo.toml" beforeDir="false" afterPath="$PROJECT_DIR$/Cargo.toml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/styling/gruvbox-dark.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/styling/gruvbox-dark.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/styling/gruvbox-light.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/styling/gruvbox-light.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/styling/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/styling/index.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/career_section.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/career_section.rs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/header_section.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/header_section.rs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/mod.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/mod.rs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/skills_section.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/skills_section.rs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.rs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -147,7 +139,7 @@
       <workItem from="1750496418083" duration="2888000" />
       <workItem from="1750524851055" duration="10003000" />
       <workItem from="1750544882616" duration="772000" />
-      <workItem from="1750661878690" duration="10823000" />
+      <workItem from="1750661878690" duration="11684000" />
     </task>
     <task id="LOCAL-00001" summary="Separate components into individual files. Update content">
       <option name="closed" value="true" />
@@ -205,7 +197,15 @@
       <option name="project" value="LOCAL" />
       <updated>1750545576760</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Auto-detect device theme. Clean up CSS">
+      <option name="closed" value="true" />
+      <created>1750675547875</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1750675547875</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -219,6 +219,7 @@
     <MESSAGE value="Change fonts" />
     <MESSAGE value="Move skills to chips. Re-style" />
     <MESSAGE value="Improve headings style" />
-    <option name="LAST_COMMIT_MESSAGE" value="Improve headings style" />
+    <MESSAGE value="Auto-detect device theme. Clean up CSS" />
+    <option name="LAST_COMMIT_MESSAGE" value="Auto-detect device theme. Clean up CSS" />
   </component>
 </project>

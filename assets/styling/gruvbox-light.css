@@ -21,16 +21,19 @@ body:has(main.gruvbox-light) {
     color: #9d0006;
 }
 
-.gruvbox-light a:hover {
-    color: #1d2021;
-}
-
 .gruvbox-light a:visited {
     color: #af3a03;
 }
 
-.gruvbox-light a:visited:hover {
-    color: #1d2021;
+/* Only apply hover effects on devices that can actually hover */
+@media (hover: hover) and (pointer: fine) {
+    .gruvbox-light a:hover {
+        color: #1d2021;
+    }
+
+    .gruvbox-light a:visited:hover {
+        color: #1d2021;
+    }
 }
 
 .gruvbox-light pre {
