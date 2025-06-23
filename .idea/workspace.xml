@@ -11,23 +11,7 @@
     </cargoProject>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b3157e2f-fd07-489e-b2a5-8b49df018d62" name="Changes" comment="Apply hover effect only on supported devices">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/styling/gruvbox-dark.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/styling/gruvbox-dark.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/styling/gruvbox-light.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/styling/gruvbox-light.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/styling/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/styling/index.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/about_section.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/about_section.rs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/career_section.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/experience_section.rs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/contact_section.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/contact_section.rs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/data.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/data.rs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/header_section.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/header_section.rs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/mod.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/mod.rs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/nav_section.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/nav_section.rs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/projects_section.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/projects_section.rs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/scroll_to_top.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/scroll_to_top.rs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/skills_section.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/skills_section.rs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.rs" afterDir="false" />
-    </list>
+    <list default="true" id="b3157e2f-fd07-489e-b2a5-8b49df018d62" name="Changes" comment="Add nav-bar. Restyle and relocate Contact section. Refactor" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -152,7 +136,7 @@
       <workItem from="1750524851055" duration="10003000" />
       <workItem from="1750544882616" duration="772000" />
       <workItem from="1750661878690" duration="11903000" />
-      <workItem from="1750687447057" duration="9214000" />
+      <workItem from="1750687447057" duration="9548000" />
     </task>
     <task id="LOCAL-00001" summary="Separate components into individual files. Update content">
       <option name="closed" value="true" />
@@ -226,7 +210,15 @@
       <option name="project" value="LOCAL" />
       <updated>1750676372450</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Add nav-bar. Restyle and relocate Contact section. Refactor">
+      <option name="closed" value="true" />
+      <created>1750698528066</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1750698528066</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -242,6 +234,7 @@
     <MESSAGE value="Improve headings style" />
     <MESSAGE value="Auto-detect device theme. Clean up CSS" />
     <MESSAGE value="Apply hover effect only on supported devices" />
-    <option name="LAST_COMMIT_MESSAGE" value="Apply hover effect only on supported devices" />
+    <MESSAGE value="Add nav-bar. Restyle and relocate Contact section. Refactor" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add nav-bar. Restyle and relocate Contact section. Refactor" />
   </component>
 </project>
