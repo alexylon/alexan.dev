@@ -8,7 +8,7 @@ pub fn CareerSection() -> Element {
             class: "career",
             h2 { "Career History" }
             {CAREER_ENTRIES.iter().map(|entry| rsx! {
-                h4 {
+                h3 {
                     "{entry.title}",
                     i { " • {entry.company_and_period}" }
                 }

@@ -3,7 +3,7 @@ use dioxus::prelude::*;
 use crate::Theme;
 
 #[component]
-pub fn SkillsSection(theme: Signal<Theme>) -> Element {
+pub fn SkillsSection() -> Element {
     rsx! {
         section {
             class: "skills",
@@ -11,8 +11,7 @@ pub fn SkillsSection(theme: Signal<Theme>) -> Element {
             {SKILL.iter().map(|cat| rsx! {
                 span { 
                     class: "chip", 
-                    style: "background-color: {theme().chip_bg_color()}",
-                    "{cat.label}" 
+                    "{cat.label}"
                 }
             })
             }

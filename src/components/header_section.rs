@@ -1,4 +1,4 @@
-use crate::components::data::{ContactLinkHref, CONTACT_LINKS, PROFILE};
+use crate::components::data::{PROFILE};
 use crate::Theme;
 use dioxus::prelude::*;
 
@@ -22,39 +22,6 @@ pub fn HeaderSection(theme: Signal<Theme>) -> Element {
                         width: "24",
                     }
                 }
-            }
-
-            p {
-                class: "get-in-touch",
-                {CONTACT_LINKS.iter().enumerate().map(|(i, link)| {
-                    let link_elem = match &link.href {
-                        ContactLinkHref::Plain(href) => rsx! {
-                            a {
-                                href: "{href}",
-                                target: link.target.unwrap_or(""),
-                                rel: link.rel.unwrap_or(""),
-                                download: link.download.unwrap_or(""),
-                                "{link.label}"
-                            }
-                        },
-                        ContactLinkHref::ResumeAsset => rsx! {
-                            a {
-                                // href: asset!("/assets/resume_alexander.pdf"),
-                                download: link.download.unwrap_or(""),
-                                "{link.label}"
-                            }
-                        },
-                    };
-
-                    if i < CONTACT_LINKS.len() - 1 {
-                        rsx! {
-                            {link_elem}
-                            span { " | " }
-                        }
-                    } else {
-                        link_elem
-                    }
-                })}
             }
         }
     }

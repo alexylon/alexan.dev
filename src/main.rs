@@ -56,18 +56,27 @@ impl Theme {
             Theme::Light => asset!("/assets/icons/keyboard_arrow_up_dark.svg"),
         }
     }
+}
 
-    fn chip_bg_color(&self) -> &'static str {
-        match self {
-            Theme::Dark => "#3C3836",
-            Theme::Light => "#EBDBB2",
+fn get_system_theme() -> Theme {
+    use web_sys::window;
+
+    if let Some(window) = window() {
+        if let Ok(media_query) = window.match_media("(prefers-color-scheme: dark)") {
+            if let Some(media_query) = media_query {
+                if media_query.matches() {
+                    return Theme::Dark;
+                }
+            }
         }
     }
+
+    Theme::Light
 }
 
 #[component]
 fn App() -> Element {
-    let theme = use_signal(|| Theme::Dark);
+    let theme = use_signal(|| get_system_theme());
     let mut top_element: Signal<Option<Rc<MountedData>>> = use_signal(|| None);
 
     rsx! {
@@ -101,8 +110,9 @@ fn App() -> Element {
             onmounted: move |cx| top_element.set(Some(cx.data())),
             // NavSection { theme }
             HeaderSection { theme }
+            ContactSection {}
             AboutSection {}
-            SkillsSection { theme }
+            SkillsSection {}
             CareerSection {}
             ProjectsSection {}
             EducationSection {}

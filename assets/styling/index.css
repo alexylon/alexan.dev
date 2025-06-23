@@ -48,14 +48,13 @@ main {
     }
 }
 
-h1, h4, h5 {
-    margin-bottom: var(--spacing-xs);
-}
-
-h1 {
-    margin-bottom: 0;
+h1, h2, h3, h4, h5, h6 {
     font-family: 'Podkova', serif;
     font-weight: 700;
+}
+
+h1, h4, h5 {
+    margin-bottom: var(--spacing-xs);
 }
 
 h1 + * {
@@ -65,11 +64,9 @@ h1 + * {
 h2 {
     margin-top: var(--spacing-lg);
     margin-bottom: var(--spacing-sm);
-    font-family: 'Podkova', serif;
-    font-weight: 700;
 }
 
-h4 {
+h3 {
     margin-left: var(--spacing-xs);
 }
 
@@ -145,13 +142,9 @@ hr {
     background: repeating-linear-gradient(90deg, var(--color-bg-gradient-1), var(--color-bg-gradient-1) 6px, var(--color-bg-gradient-2) 2px, var(--color-bg-gradient-2) 8px);
 }
 
-.get-in-touch {
+.contact {
     display: flex;
     justify-content: space-between;
-}
-
-.get-in-touch span {
-    margin: 0 var(--spacing-xs);
 }
 
 .about-me {
@@ -179,7 +172,11 @@ hr {
 }
 
 .theme-switch {
-    margin-top: 17px;
+    margin-top: var(--spacing-md);
+}
+
+.theme-switch img {
+    cursor: pointer;
 }
 
 .go-to-top {

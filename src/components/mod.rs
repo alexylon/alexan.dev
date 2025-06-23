@@ -10,14 +10,16 @@ pub mod languages_section;
 pub mod nav_section;
 pub mod projects_section;
 pub mod skills_section;
+pub mod contact_section;
 
+pub use header_section::HeaderSection;
+pub use contact_section::ContactSection;
 pub use about_section::AboutSection;
 pub use career_section::CareerSection;
 pub use certifications_section::CertificationsSection;
 pub use education_section::EducationSection;
 pub use footer_section::FooterSection;
 pub use scroll_to_top::ScrollToTop;
-pub use header_section::HeaderSection;
 pub use languages_section::LanguagesSection;
 pub use nav_section::NavSection;
 pub use projects_section::ProjectsSection;

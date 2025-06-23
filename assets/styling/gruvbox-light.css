@@ -1,31 +1,12 @@
-/*General*/
 body:has(main.gruvbox-light) {
     background: #f9f5d7;
     color: #1d2021;
 }
 
-.gruvbox-light code pre {
+.gruvbox-light {
     background-color: #f9f5d7;
-    color: #3F612D;
-    padding: 1em;
-    border: 0;
+    color: #1d2021;
 }
-
-.gruvbox-light a,
-.gruvbox-light a:active,
-.gruvbox-light a:visited {
-    color: #0E6BA8;
-    cursor: pointer;
-}
-
-.gruvbox-light ::selection {
-    background: #BCD3F2;
-}
-
-/*.gruvbox-dark {*/
-/*    background-color: #f9f5d7;*/
-/*    color: #1d2021;*/
-/*}*/
 
 .gruvbox-light h1,
 .gruvbox-light h2,
@@ -33,69 +14,30 @@ body:has(main.gruvbox-light) {
 .gruvbox-light h4,
 .gruvbox-light h5,
 .gruvbox-light h6 {
-    color: #4F4F0D
+    color: #9d0006
 }
 
-.gruvbox-light h1 a:hover,
-.gruvbox-light h2 a:hover,
-.gruvbox-light h3 a:hover,
-.gruvbox-light h4 a:hover,
-.gruvbox-light h5 a:hover,
-.gruvbox-light h6 a:hover {
-    background-color: #d79921;
-    color: #282828;
+.gruvbox-light a {
+    color: #9d0006;
 }
 
-.gruvbox-light .progress-bar-filled:after,
-.gruvbox-light .progress-bar-filled:before,
-.gruvbox-light code,
-.gruvbox-light strong {
-    color: #98971a
-}
-
-.gruvbox-light table {
+.gruvbox-light a:hover {
     color: #1d2021;
 }
 
-.gruvbox-light .form-control,
-.gruvbox-light .form-group label {
+.gruvbox-light a:visited {
+    color: #af3a03;
+}
+
+.gruvbox-light a:visited:hover {
     color: #1d2021;
-    border-color: #98971a
 }
 
-.gruvbox-light .form-group.form-textarea label:after {
-    background-color: #3c3836;
+.gruvbox-light pre {
+    background-color: #f9f5d7;
+    border: none;
 }
 
-.gruvbox-light .form-control:focus {
-    border-color: #665c54;
-    color: #665c54;
-}
-
-.gruvbox-light textarea.form-control {
-    color: #282828;
-}
-
-.gruvbox-light .card .card-header {
-    background-color: transparent;
-    color: #282828;
-    border-bottom: 1px solid #98971a
-}
-
-.gruvbox-light .btn.btn-ghost.btn-default:focus,
-.gruvbox-light .btn.btn-ghost.btn-default:hover {
-    z-index: 1;
-    border-color: #3c3836;
-    color: #3c3836;
-}
-
-.gruvbox-light .menu .menu-item {
-    color: #282828;
-    border-color: #98971a
-}
-
-.gruvbox-light .menu .menu-item.active,
-.gruvbox-light .menu .menu-item:hover {
-    color: #282828;
-    border-color: #282828;
+.gruvbox-light .chip {
+    background-color: #ebdbb2;
 }
