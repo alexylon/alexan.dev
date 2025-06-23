@@ -1,13 +1,15 @@
-use crate::components::data::CAREER_ENTRIES;
+use std::rc::Rc;
+use crate::components::data::EXPERIENCE_ENTRIES;
 use dioxus::prelude::*;
 
 #[component]
-pub fn CareerSection() -> Element {
+pub fn ExperienceSection(experience_section: Signal<Option<Rc<MountedData>>>) -> Element {
     rsx! {
         section {
-            class: "career",
-            h2 { "Career History" }
-            {CAREER_ENTRIES.iter().map(|entry| rsx! {
+            onmounted: move |cx| experience_section.set(Some(cx.data())),
+            class: "experience",
+            h2 { "Experience" }
+            {EXPERIENCE_ENTRIES.iter().map(|entry| rsx! {
                 h3 {
                     "{entry.title}",
                     i { " • {entry.company_and_period}" }

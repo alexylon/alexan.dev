@@ -41,6 +41,7 @@ body:has(main.gruvbox-light) {
     border: none;
 }
 
-.gruvbox-light .chip {
+.gruvbox-light .chip,
+.gruvbox-light .nav-bar {
     background-color: #ebdbb2;
 }

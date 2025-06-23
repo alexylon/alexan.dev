@@ -1,5 +1,5 @@
 pub mod about_section;
-pub mod career_section;
+pub mod experience_section;
 pub mod certifications_section;
 mod data;
 pub mod education_section;
@@ -15,7 +15,7 @@ pub mod contact_section;
 pub use header_section::HeaderSection;
 pub use contact_section::ContactSection;
 pub use about_section::AboutSection;
-pub use career_section::CareerSection;
+pub use experience_section::ExperienceSection;
 pub use certifications_section::CertificationsSection;
 pub use education_section::EducationSection;
 pub use footer_section::FooterSection;

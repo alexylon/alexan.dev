@@ -41,6 +41,7 @@ body:has(main.gruvbox-dark) {
     border: none
 }
 
-.gruvbox-dark .chip {
+.gruvbox-dark .chip,
+.gruvbox-dark .nav-bar {
     background-color: #3c3836;
 }

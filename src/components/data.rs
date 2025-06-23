@@ -3,63 +3,10 @@ pub struct ProfileInfo<'a> {
     pub title: &'a str,
 }
 
-pub enum ContactLinkHref<'a> {
-    Plain(&'a str),
-    ResumeAsset,
-}
-
-pub struct ContactLink<'a> {
-    pub label: &'a str,
-    pub href: ContactLinkHref<'a>,
-    pub target: Option<&'a str>,
-    pub rel: Option<&'a str>,
-    pub download: Option<&'a str>,
-}
-
 pub const PROFILE: ProfileInfo = ProfileInfo {
     name: "Alexander Alexandrov",
     title: "Full-Stack Developer",
 };
-
-pub const CONTACT_LINKS: &[ContactLink] = &[
-    ContactLink {
-        label: "Sofia",
-        href: ContactLinkHref::Plain(
-            "https://www.google.com/maps/place/42°41'05.7\"N+23°19'08.5\"E",
-        ),
-        target: Some("_blank"),
-        rel: Some("noopener noreferrer"),
-        download: None,
-    },
-    ContactLink {
-        label: "Email",
-        href: ContactLinkHref::Plain("mailto:contact@alexandrov.cc"),
-        target: None,
-        rel: None,
-        download: None,
-    },
-    ContactLink {
-        label: "LinkedIn",
-        href: ContactLinkHref::Plain("https://www.linkedin.com/in/alexandrovalexander/"),
-        target: Some("_blank"),
-        rel: Some("noopener noreferrer"),
-        download: None,
-    },
-    ContactLink {
-        label: "GitHub",
-        href: ContactLinkHref::Plain("https://github.com/alexylon"),
-        target: Some("_blank"),
-        rel: Some("noopener noreferrer"),
-        download: None,
-    },
-    // ContactLink {
-    //     label: "Resume ⬇",
-    //     href: ContactLinkHref::ResumeAsset,
-    //     target: None,
-    //     rel: None,
-    //     download: Some("resume_alexander_alexandrov.pdf"),
-    // },
-];
 
 pub struct Skill<'a> {
     pub label: &'a str,
@@ -92,14 +39,14 @@ pub const SKILL: &[Skill] = &[
     Skill { label: "Helix Editor" },
 ];
 
-pub struct CareerEntry<'a> {
+pub struct ExperienceEntry<'a> {
     pub title: &'a str,
     pub company_and_period: &'a str,
     pub responsibilities: &'a [&'a str],
 }
 
-pub const CAREER_ENTRIES: &[CareerEntry] = &[
-    CareerEntry {
+pub const EXPERIENCE_ENTRIES: &[ExperienceEntry] = &[
+    ExperienceEntry {
         title: "Full-Stack Developer",
         company_and_period: "Proxiad | Aug 2023 – Present",
         responsibilities: &[
@@ -108,7 +55,7 @@ pub const CAREER_ENTRIES: &[CareerEntry] = &[
             "Collaborate with UI/UX teams to streamline releases and improve feature turnaround time.",
         ],
     },
-    CareerEntry {
+    ExperienceEntry {
         title: "Full-Stack Developer",
         company_and_period: "DXC Technology | Apr 2020 - Aug 2023",
         responsibilities: &[
@@ -118,7 +65,7 @@ pub const CAREER_ENTRIES: &[CareerEntry] = &[
             "Maintained PostgreSQL schemas and iBATIS data layers, resolving performance bottlenecks and reducing query time by 90%.",
         ],
     },
-    CareerEntry {
+    ExperienceEntry {
         title: "Web Developer Intern",
         company_and_period: "Camplight | Sep 2019 - Apr 2020",
         responsibilities: &[
@@ -222,4 +169,48 @@ pub const LANGUAGES: &[Language] = &[
         name: "Greek",
         level: "(A2)",
     },
+];
+
+pub enum ContactLinkHref<'a> {
+    Plain(&'a str),
+    ResumeAsset,
+}
+
+pub struct ContactLink<'a> {
+    pub label: &'a str,
+    pub href: ContactLinkHref<'a>,
+    pub target: Option<&'a str>,
+    pub rel: Option<&'a str>,
+    pub download: Option<&'a str>,
+}
+
+pub const CONTACT_LINKS: &[ContactLink] = &[
+    ContactLink {
+        label: "Email",
+        href: ContactLinkHref::Plain("mailto:contact@alexandroff.me"),
+        target: None,
+        rel: None,
+        download: None,
+    },
+    ContactLink {
+        label: "LinkedIn",
+        href: ContactLinkHref::Plain("https://www.linkedin.com/in/alexandrovalexander/"),
+        target: Some("_blank"),
+        rel: Some("noopener noreferrer"),
+        download: None,
+    },
+    ContactLink {
+        label: "GitHub",
+        href: ContactLinkHref::Plain("https://github.com/alexylon"),
+        target: Some("_blank"),
+        rel: Some("noopener noreferrer"),
+        download: None,
+    },
+    // ContactLink {
+    //     label: "Resume ⬇",
+    //     href: ContactLinkHref::ResumeAsset,
+    //     target: None,
+    //     rel: None,
+    //     download: Some("resume_alexander_alexandrov.pdf"),
+    // },
 ];

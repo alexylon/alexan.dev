@@ -26,7 +26,7 @@ pub fn AboutSection() -> Element {
                 alt: "Alexander Alexandrov"
             }
             p {
-                "Full-stack developer with {years}+ years of experience building scalable applications using Rust, TypeScript, React/Next.js, and Java. Skilled in end-to-end development, delivering clean, reliable code in collaborative environments."
+                "Based in Sofia, BG, I am a full-stack developer with {years}+ years of experience building scalable applications using Rust, TypeScript, React/Next.js, and Java. Skilled in end-to-end development, I deliver clean, reliable code in collaborative environments."
             }
         }
     }

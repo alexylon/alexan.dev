@@ -78,6 +78,10 @@ fn get_system_theme() -> Theme {
 fn App() -> Element {
     let theme = use_signal(|| get_system_theme());
     let mut top_element: Signal<Option<Rc<MountedData>>> = use_signal(|| None);
+    let skills_section: Signal<Option<Rc<MountedData>>> = use_signal(|| None);
+    let experience_section: Signal<Option<Rc<MountedData>>> = use_signal(|| None);
+    let projects_section: Signal<Option<Rc<MountedData>>> = use_signal(|| None);
+    let contact_section: Signal<Option<Rc<MountedData>>> = use_signal(|| None);
 
     rsx! {
         document::Link {
@@ -108,16 +112,16 @@ fn App() -> Element {
             class: "{theme().css_class()}",
             class: "top",
             onmounted: move |cx| top_element.set(Some(cx.data())),
-            // NavSection { theme }
+            NavSection { theme, skills_section, experience_section, projects_section, contact_section }
             HeaderSection { theme }
-            ContactSection {}
             AboutSection {}
-            SkillsSection {}
-            CareerSection {}
-            ProjectsSection {}
+            SkillsSection { skills_section }
+            ExperienceSection { experience_section }
+            ProjectsSection { projects_section }
             EducationSection {}
             CertificationsSection {}
             LanguagesSection {}
+            ContactSection { contact_section }
             FooterSection {}
             ScrollToTop { top_element }
         }

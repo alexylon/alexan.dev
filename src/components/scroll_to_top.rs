@@ -50,7 +50,7 @@ pub fn ScrollToTop(top_element: Signal<Option<Rc<MountedData>>>) -> Element {
 
     rsx! {
         button {
-            class: "go-to-top",
+            class: "scroll-to-top",
             class: if show_button() { "" } else { "hidden" },
             onclick: move |_| async move {
                     if let Some(header) = top_element.cloned() {

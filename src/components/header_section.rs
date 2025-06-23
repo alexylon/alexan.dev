@@ -5,7 +5,7 @@ use dioxus::prelude::*;
 #[component]
 pub fn HeaderSection(theme: Signal<Theme>) -> Element {
     rsx! {
-        header {
+        section {
             class: "header",
             div {
                 class: "container",
