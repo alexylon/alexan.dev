@@ -1,5 +1,5 @@
-.gruvbox-light {
-    background-color: #f9f5d7;
+body:has(main.gruvbox-light) {
+    background: #f9f5d7;
     color: #1d2021;
 }
 

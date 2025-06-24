@@ -1,6 +1,6 @@
-.gruvbox-dark {
-    background-color: #1d2021;
-    color: #f9f5d7
+body:has(main.gruvbox-dark) {
+    background: #1d2021;
+    color: #f9f5d7;
 }
 
 .gruvbox-dark h1,

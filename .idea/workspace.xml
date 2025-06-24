@@ -11,26 +11,10 @@
     </cargoProject>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b3157e2f-fd07-489e-b2a5-8b49df018d62" name="Changes" comment="update workspace">
+    <list default="true" id="b3157e2f-fd07-489e-b2a5-8b49df018d62" name="Changes" comment="floating nav-bar. update skills. refactor">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/styling/gruvbox-dark.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/styling/gruvbox-dark.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/styling/gruvbox-light.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/styling/gruvbox-light.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/styling/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/styling/index.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/about_section.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/about_section.rs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/certifications_section.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/certifications_section.rs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/contact_section.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/contact_section.rs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/data.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/data.rs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/education_section.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/education_section.rs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/experience_section.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/experience_section.rs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/footer_section.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/footer_section.rs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/header_section.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/header_section.rs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/languages_section.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/languages_section.rs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/mod.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/mod.rs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/nav_section.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/nav_section.rs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/projects_section.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/projects_section.rs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/scroll_to_top.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/scroll_to_top.rs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/skills_section.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/skills_section.rs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.rs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -157,7 +141,8 @@
       <workItem from="1750544882616" duration="772000" />
       <workItem from="1750661878690" duration="11903000" />
       <workItem from="1750687447057" duration="9950000" />
-      <workItem from="1750772699949" duration="6655000" />
+      <workItem from="1750772699949" duration="7381000" />
+      <workItem from="1750788544570" duration="887000" />
     </task>
     <task id="LOCAL-00001" summary="Separate components into individual files. Update content">
       <option name="closed" value="true" />
@@ -247,7 +232,15 @@
       <option name="project" value="LOCAL" />
       <updated>1750698634871</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="floating nav-bar. update skills. refactor">
+      <option name="closed" value="true" />
+      <created>1750779891934</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1750779891934</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -265,6 +258,7 @@
     <MESSAGE value="Apply hover effect only on supported devices" />
     <MESSAGE value="Add nav-bar. Restyle and relocate Contact section. Refactor" />
     <MESSAGE value="update workspace" />
-    <option name="LAST_COMMIT_MESSAGE" value="update workspace" />
+    <MESSAGE value="floating nav-bar. update skills. refactor" />
+    <option name="LAST_COMMIT_MESSAGE" value="floating nav-bar. update skills. refactor" />
   </component>
 </project>
