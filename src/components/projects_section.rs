@@ -1,13 +1,13 @@
-use std::rc::Rc;
 use crate::components::data::PROJECTS;
 use dioxus::prelude::*;
+use std::rc::Rc;
 
 #[component]
 pub fn ProjectsSection(projects_section: Signal<Option<Rc<MountedData>>>) -> Element {
     rsx! {
         section {
             onmounted: move |cx| projects_section.set(Some(cx.data())),
-            class: "projects",
+            class: "projects-section",
             h2 { "Selected Projects" }
             ul {
                 class: "list-disc",

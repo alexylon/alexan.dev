@@ -14,29 +14,49 @@ pub struct Skill<'a> {
 
 pub const SKILL: &[Skill] = &[
     Skill { label: "Rust" },
-    Skill { label: "JavaScript" },
-    Skill { label: "TypeScript" },
+    Skill {
+        label: "JavaScript",
+    },
+    Skill {
+        label: "TypeScript",
+    },
     Skill { label: "Java" },
     Skill { label: "React" },
     Skill { label: "Next.js" },
     Skill { label: "Redux" },
-    Skill { label: "WebAssembly" },
+    Skill {
+        label: "WebAssembly",
+    },
     Skill { label: "Node.js" },
-    Skill { label: "ExtendScript" },
+    Skill {
+        label: "ExtendScript",
+    },
     Skill { label: "Docker" },
-    Skill { label: "Vercel AI SDK" },
+    Skill {
+        label: "Vercel AI SDK",
+    },
     Skill { label: "AWS SDK" },
-    Skill { label: "PostgreSQL" },
+    Skill {
+        label: "PostgreSQL",
+    },
     Skill { label: "REST APIs" },
     Skill { label: "GraphQL" },
-    Skill { label: "Spring MVC" },
+    Skill {
+        label: "Spring MVC",
+    },
     Skill { label: "Terraform" },
     Skill { label: "Git" },
     Skill { label: "macOS CLI" },
     Skill { label: "Linux CLI" },
-    Skill { label: "LLMs (GPT, Claude)" },
-    Skill { label: "JetBrains IDEs" },
-    Skill { label: "Helix Editor" },
+    Skill {
+        label: "LLMs (GPT, Claude)",
+    },
+    Skill {
+        label: "JetBrains IDEs",
+    },
+    Skill {
+        label: "Helix Editor",
+    },
 ];
 
 pub struct ExperienceEntry<'a> {
@@ -50,7 +70,7 @@ pub const EXPERIENCE_ENTRIES: &[ExperienceEntry] = &[
         title: "Full-Stack Developer",
         company_and_period: "Proxiad | Aug 2023 – Present",
         responsibilities: &[
-            "Deliver complex applications with React/Next.js, TypeScript, and SCSS.",
+            "Develop complex applications for a professional digital publishing solution utilizing React, TypeScript, JavaScript, ExtendScript, Redux, and SCSS.",
             "Contribute to Java back-end APIs, ensuring consistent coding standards and test coverage.",
             "Collaborate with UI/UX teams to streamline releases and improve feature turnaround time.",
         ],
@@ -60,9 +80,9 @@ pub const EXPERIENCE_ENTRIES: &[ExperienceEntry] = &[
         company_and_period: "DXC Technology | Apr 2020 - Aug 2023",
         responsibilities: &[
             "Modernized an enterprise solution by migrating critical components from Java to Rust.",
-            "Built front-end features in React and Material UI; implemented REST services with Spring MVC.",
-            "Automated cloud infrastructure with Terraform and AWS services, improving deployment reliability.",
-            "Maintained PostgreSQL schemas and iBATIS data layers, resolving performance bottlenecks and reducing query time by 90%.",
+            "Played a key role in developing a Visual Product Modeling System using React, TypeScript, Material UI, and Java, enhancing user interaction and product visualization capabilities.",
+            "Developed a complete full-stack service using AWS SDK, React, TypeScript, and Terraform, integrating various AWS functionalities to streamline and enhance customer solutions.",
+            "Developed new features for the BMW Group Vulnerability Tool; maintained PostgreSQL schemas and iBATIS data layers, resolving performance bottlenecks and reducing query time by 90% (from 30 to 3 seconds), resulting in significant cost savings and improved system efficiency.",
         ],
     },
     ExperienceEntry {

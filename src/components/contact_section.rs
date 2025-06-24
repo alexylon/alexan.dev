@@ -1,13 +1,13 @@
-use std::rc::Rc;
 use crate::components::data::{ContactLinkHref, CONTACT_LINKS};
 use dioxus::prelude::*;
+use std::rc::Rc;
 
 #[component]
 pub fn ContactSection(contact_section: Signal<Option<Rc<MountedData>>>) -> Element {
     rsx! {
         section {
             onmounted: move |cx| contact_section.set(Some(cx.data())),
-            class: "contact",
+            class: "contact-section",
             h2 { "Contact" }
             ul {
             {CONTACT_LINKS.iter().enumerate().map(|(i, link)| {

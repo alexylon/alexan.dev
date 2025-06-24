@@ -6,6 +6,7 @@ pub fn FooterSection() -> Element {
         hr { class: "dashed" }
 
         footer {
+            class: "footer-section",
             p {
                 "Hosted on my Raspberry Pi and served with "
                 a {

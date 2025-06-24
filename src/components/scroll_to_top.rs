@@ -1,6 +1,6 @@
+use dioxus::logger::tracing;
 use dioxus::prelude::*;
 use std::rc::Rc;
-use dioxus::logger::tracing;
 use wasm_bindgen::JsCast;
 
 #[component]

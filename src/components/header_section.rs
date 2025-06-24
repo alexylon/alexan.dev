@@ -1,4 +1,4 @@
-use crate::components::data::{PROFILE};
+use crate::components::data::PROFILE;
 use crate::Theme;
 use dioxus::prelude::*;
 
@@ -6,7 +6,7 @@ use dioxus::prelude::*;
 pub fn HeaderSection(theme: Signal<Theme>) -> Element {
     rsx! {
         section {
-            class: "header",
+            class: "header-section",
             div {
                 class: "container",
                 div {

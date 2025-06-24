@@ -12,6 +12,7 @@ pub fn NavSection(
 ) -> Element {
     rsx! {
         nav {
+            class: "fixed-nav",
             div {
                 class: "nav-bar",
                 h3 {

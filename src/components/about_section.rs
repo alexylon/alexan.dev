@@ -19,7 +19,7 @@ pub fn AboutSection() -> Element {
 
     rsx! {
         section {
-            class: "about-me",
+            class: "about-section",
             h2 { "About Me" }
             img {
                 src: asset!("/assets/images/alex_ascii.jpg"),

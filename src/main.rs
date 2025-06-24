@@ -110,20 +110,22 @@ fn App() -> Element {
 
         main {
             class: "{theme().css_class()}",
-            class: "top",
-            onmounted: move |cx| top_element.set(Some(cx.data())),
-            NavSection { theme, skills_section, experience_section, projects_section, contact_section }
-            HeaderSection { theme }
-            AboutSection {}
-            SkillsSection { skills_section }
-            ExperienceSection { experience_section }
-            ProjectsSection { projects_section }
-            EducationSection {}
-            CertificationsSection {}
-            LanguagesSection {}
-            ContactSection { contact_section }
-            FooterSection {}
-            ScrollToTop { top_element }
+            div {
+                class: "resume",
+                onmounted: move |cx| top_element.set(Some(cx.data())),
+                NavSection { theme, skills_section, experience_section, projects_section, contact_section }
+                HeaderSection { theme }
+                AboutSection {}
+                SkillsSection { skills_section }
+                ExperienceSection { experience_section }
+                ProjectsSection { projects_section }
+                EducationSection {}
+                CertificationsSection {}
+                LanguagesSection {}
+                ContactSection { contact_section }
+                FooterSection {}
+                ScrollToTop { top_element }
+            }
         }
     }
 }

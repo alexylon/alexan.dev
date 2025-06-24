@@ -4,7 +4,7 @@ use dioxus::prelude::*;
 pub fn CertificationsSection() -> Element {
     rsx! {
         section {
-            class: "certification",
+            class: "certification-section",
             h2 { "Certifications" }
             p {
                 a {
