@@ -11,10 +11,9 @@
     </cargoProject>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b3157e2f-fd07-489e-b2a5-8b49df018d62" name="Changes" comment="floating nav-bar. update skills. refactor">
+    <list default="true" id="b3157e2f-fd07-489e-b2a5-8b49df018d62" name="Changes" comment="fix theme on iOS landscape">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/styling/gruvbox-dark.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/styling/gruvbox-dark.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/styling/gruvbox-light.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/styling/gruvbox-light.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/styling/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/styling/index.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -142,7 +141,8 @@
       <workItem from="1750661878690" duration="11903000" />
       <workItem from="1750687447057" duration="9950000" />
       <workItem from="1750772699949" duration="7381000" />
-      <workItem from="1750788544570" duration="887000" />
+      <workItem from="1750788544570" duration="1191000" />
+      <workItem from="1750849438805" duration="1372000" />
     </task>
     <task id="LOCAL-00001" summary="Separate components into individual files. Update content">
       <option name="closed" value="true" />
@@ -240,7 +240,15 @@
       <option name="project" value="LOCAL" />
       <updated>1750779891934</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="fix theme on iOS landscape">
+      <option name="closed" value="true" />
+      <created>1750789578098</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1750789578098</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -259,6 +267,7 @@
     <MESSAGE value="Add nav-bar. Restyle and relocate Contact section. Refactor" />
     <MESSAGE value="update workspace" />
     <MESSAGE value="floating nav-bar. update skills. refactor" />
-    <option name="LAST_COMMIT_MESSAGE" value="floating nav-bar. update skills. refactor" />
+    <MESSAGE value="fix theme on iOS landscape" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix theme on iOS landscape" />
   </component>
 </project>
