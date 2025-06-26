@@ -42,7 +42,7 @@ body {
 .resume {
     max-width: var(--max-width);
     margin: auto;
-    padding-top: calc(var(--spacing-lg) + var(--spacing-md));
+    padding-top: var(--spacing-xxl);
     padding-bottom: var(--spacing-md);
 }
 
