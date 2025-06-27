@@ -1,4 +1,4 @@
-## My simple web-resume, made with Rust and compiled to WASM (WebAssembly)
+## My simple web resume — written in Rust, powered by Dioxus, compiled to WebAssembly (WASM)
 
 (Currently running on my Raspberry Pi and might be slow)
 
