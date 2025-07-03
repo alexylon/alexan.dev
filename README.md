@@ -1,6 +1,6 @@
 ## My simple web resume — written in Rust, powered by Dioxus, compiled to WebAssembly (WASM)
 
-(Currently running on my Raspberry Pi and might be slow)
+[alexan.dev](https://alexan.dev) is hosted on my Raspberry Pi and served with [serve](https://github.com/alexylon/serve).
 
 ### Prerequisites (one-time setup)
 
