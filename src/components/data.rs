@@ -207,7 +207,7 @@ pub struct ContactLink<'a> {
 pub const CONTACT_LINKS: &[ContactLink] = &[
     ContactLink {
         label: "Email",
-        href: ContactLinkHref::Plain("mailto:contact@alexandroff.me"),
+        href: ContactLinkHref::Plain("mailto:self@alexan.dev"),
         target: None,
         rel: None,
         download: None,
