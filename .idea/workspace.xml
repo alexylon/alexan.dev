@@ -11,9 +11,17 @@
     </cargoProject>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b3157e2f-fd07-489e-b2a5-8b49df018d62" name="Changes" comment="Create deploy script">
+    <list default="true" id="93a45009-5e28-485c-9ac6-a72d356c7ed8" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/alexandroff.dev.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/project.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/git_toolbox_prj.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_21_06_25,_12_11_[Changes]/SchibstedGrotesk-Regular.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_21_06_25,_12_11_[Changes]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_21_06_25__12_11__Changes_.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/styling/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/styling/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cargo.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Cargo.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/data.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/data.rs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,70 +29,38 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="RsBuildProfile:dev" />
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="Rust File" />
-      </list>
-    </option>
-  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MacroExpansionManager">
-    <option name="directoryName" value="7qPdBQiQ" />
+    <option name="directoryName" value="b74VpPXH" />
   </component>
-  <component name="ProjectColorInfo">{
-  &quot;customColor&quot;: &quot;&quot;,
-  &quot;associatedIndex&quot;: 3
-}</component>
-  <component name="ProjectId" id="2yJv0ObeXCljtcGZ4rWaJxDZYRx" />
-  <component name="ProjectLevelVcsManager">
-    <OptionsSetting value="false" id="Update" />
-  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 5
+}]]></component>
+  <component name="ProjectId" id="2zOrZ39ErdlTErSoEGO47pAfdwQ" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.rust.reset.selective.auto.import&quot;: &quot;true&quot;,
-    &quot;SHELLCHECK.PATH&quot;: &quot;/Users/alex/Library/Application Support/JetBrains/RustRover2025.1/plugins/Shell Script/shellcheck&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/alex/git/aal/alexandroff.dev/assets/fonts&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;org.rust.cargo.project.model.PROJECT_DISCOVERY&quot;: &quot;true&quot;,
-    &quot;org.rust.cargo.project.model.impl.CargoExternalSystemProjectAware.subscribe.first.balloon&quot;: &quot;&quot;,
-    &quot;org.rust.first.attach.projects&quot;: &quot;true&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
-  },
-  &quot;keyToStringList&quot;: {
-    &quot;com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File&quot;: [
-      &quot;CSS&quot;
-    ]
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.rust.reset.selective.auto.import": "true",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "/Users/alex/git/aal/alexan.dev",
+    "nodejs_package_manager_path": "npm",
+    "org.rust.cargo.project.model.PROJECT_DISCOVERY": "true",
+    "org.rust.first.attach.projects": "true",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
-  <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/assets/fonts" />
-      <recent name="$PROJECT_DIR$/assets/icons" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/assets/icons" />
-    </key>
-  </component>
-  <component name="RunManager" selected="Cargo.Run alexandroff-dev">
-    <configuration name="Run alexandroff-dev" type="CargoCommandRunConfiguration" factoryName="Cargo Command">
+}]]></component>
+  <component name="RunManager" selected="Cargo.Run alexan-dev">
+    <configuration name="Run alexan-dev" type="CargoCommandRunConfiguration" factoryName="Cargo Command">
       <option name="buildProfileId" value="dev" />
-      <option name="command" value="run --package alexandroff-dev --bin alexandroff-dev" />
+      <option name="command" value="run --package alexan-dev --bin alexan-dev" />
       <option name="workingDirectory" value="file://$PROJECT_DIR$" />
       <envs />
       <option name="emulateTerminal" value="true" />
@@ -100,7 +76,7 @@
         <option name="CARGO.BUILD_TASK_PROVIDER" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Test alexandroff-dev" type="CargoCommandRunConfiguration" factoryName="Cargo Command">
+    <configuration name="Test alexan-dev" type="CargoCommandRunConfiguration" factoryName="Cargo Command">
       <option name="command" value="test --workspace" />
       <option name="workingDirectory" value="file://$PROJECT_DIR$" />
       <envs />
@@ -123,171 +99,16 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="b3157e2f-fd07-489e-b2a5-8b49df018d62" name="Changes" comment="" />
-      <created>1749565267498</created>
+      <changelist id="93a45009-5e28-485c-9ac6-a72d356c7ed8" name="Changes" comment="" />
+      <created>1751613012935</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1749565267498</updated>
-      <workItem from="1749565268859" duration="8944000" />
-      <workItem from="1750229815418" duration="15861000" />
-      <workItem from="1750250379291" duration="4448000" />
-      <workItem from="1750258667943" duration="7147000" />
-      <workItem from="1750326956019" duration="9595000" />
-      <workItem from="1750344919696" duration="8203000" />
-      <workItem from="1750421916585" duration="5089000" />
-      <workItem from="1750430844070" duration="6866000" />
-      <workItem from="1750496418083" duration="2888000" />
-      <workItem from="1750524851055" duration="10003000" />
-      <workItem from="1750544882616" duration="772000" />
-      <workItem from="1750661878690" duration="11903000" />
-      <workItem from="1750687447057" duration="9950000" />
-      <workItem from="1750772699949" duration="7381000" />
-      <workItem from="1750788544570" duration="1191000" />
-      <workItem from="1750849438805" duration="2836000" />
-      <workItem from="1751026515653" duration="991000" />
+      <updated>1751613012935</updated>
+      <workItem from="1751613014254" duration="222000" />
     </task>
-    <task id="LOCAL-00001" summary="Separate components into individual files. Update content">
-      <option name="closed" value="true" />
-      <created>1749575748731</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1749575748731</updated>
-    </task>
-    <task id="LOCAL-00002" summary="Refactor. Update content">
-      <option name="closed" value="true" />
-      <created>1750266957976</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1750266957976</updated>
-    </task>
-    <task id="LOCAL-00003" summary="Create go_to_top component. Bundle font. Restyle lists">
-      <option name="closed" value="true" />
-      <created>1750352614062</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1750352614062</updated>
-    </task>
-    <task id="LOCAL-00004" summary="Implement scroll-to-top in the dioxus way. Refactor">
-      <option name="closed" value="true" />
-      <created>1750438630349</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1750438630349</updated>
-    </task>
-    <task id="LOCAL-00005" summary="Change fonts">
-      <option name="closed" value="true" />
-      <created>1750498999174</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1750498999174</updated>
-    </task>
-    <task id="LOCAL-00006" summary="Move skills to chips. Re-style">
-      <option name="closed" value="true" />
-      <created>1750534991358</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1750534991358</updated>
-    </task>
-    <task id="LOCAL-00007" summary="Improve headings style">
-      <option name="closed" value="true" />
-      <created>1750545576760</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1750545576760</updated>
-    </task>
-    <task id="LOCAL-00008" summary="Auto-detect device theme. Clean up CSS">
-      <option name="closed" value="true" />
-      <created>1750675547875</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1750675547875</updated>
-    </task>
-    <task id="LOCAL-00009" summary="Apply hover effect only on supported devices">
-      <option name="closed" value="true" />
-      <created>1750676372450</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1750676372450</updated>
-    </task>
-    <task id="LOCAL-00010" summary="Add nav-bar. Restyle and relocate Contact section. Refactor">
-      <option name="closed" value="true" />
-      <created>1750698528066</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1750698528066</updated>
-    </task>
-    <task id="LOCAL-00011" summary="update workspace">
-      <option name="closed" value="true" />
-      <created>1750698634871</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1750698634871</updated>
-    </task>
-    <task id="LOCAL-00012" summary="floating nav-bar. update skills. refactor">
-      <option name="closed" value="true" />
-      <created>1750779891934</created>
-      <option name="number" value="00012" />
-      <option name="presentableId" value="LOCAL-00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1750779891934</updated>
-    </task>
-    <task id="LOCAL-00013" summary="fix theme on iOS landscape">
-      <option name="closed" value="true" />
-      <created>1750789578098</created>
-      <option name="number" value="00013" />
-      <option name="presentableId" value="LOCAL-00013" />
-      <option name="project" value="LOCAL" />
-      <updated>1750789578098</updated>
-    </task>
-    <task id="LOCAL-00014" summary="Enlarge nav links clickable area. Improve mobile landscape mode">
-      <option name="closed" value="true" />
-      <created>1750850985471</created>
-      <option name="number" value="00014" />
-      <option name="presentableId" value="LOCAL-00014" />
-      <option name="project" value="LOCAL" />
-      <updated>1750850985471</updated>
-    </task>
-    <task id="LOCAL-00015" summary="Create deploy script">
-      <option name="closed" value="true" />
-      <created>1750851656256</created>
-      <option name="number" value="00015" />
-      <option name="presentableId" value="LOCAL-00015" />
-      <option name="project" value="LOCAL" />
-      <updated>1750851656256</updated>
-    </task>
-    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
-  </component>
-  <component name="VcsManagerConfiguration">
-    <MESSAGE value="Separate components into individual files. Update content" />
-    <MESSAGE value="Refactor. Update content" />
-    <MESSAGE value="Create go_to_top component. Bundle font. Restyle lists" />
-    <MESSAGE value="Implement scroll-to-top in the dioxus way. Refactor" />
-    <MESSAGE value="Change fonts" />
-    <MESSAGE value="Move skills to chips. Re-style" />
-    <MESSAGE value="Improve headings style" />
-    <MESSAGE value="Auto-detect device theme. Clean up CSS" />
-    <MESSAGE value="Apply hover effect only on supported devices" />
-    <MESSAGE value="Add nav-bar. Restyle and relocate Contact section. Refactor" />
-    <MESSAGE value="update workspace" />
-    <MESSAGE value="floating nav-bar. update skills. refactor" />
-    <MESSAGE value="fix theme on iOS landscape" />
-    <MESSAGE value="Enlarge nav links clickable area. Improve mobile landscape mode" />
-    <MESSAGE value="Create deploy script" />
-    <option name="LAST_COMMIT_MESSAGE" value="Create deploy script" />
   </component>
 </project>

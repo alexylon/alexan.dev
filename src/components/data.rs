@@ -142,12 +142,12 @@ pub struct EducationEntry<'a> {
 
 pub const EDUCATION: &[EducationEntry] = &[
     EducationEntry {
-        title: "Java Fundamentals — ",
-        institution: "MaxPlus",
+        title: "React & JavaScript — ",
+        institution: "Camplight Academy",
     },
     EducationEntry {
-        title: "React & JavaScript — ",
-        institution: "Camplight",
+        title: "Java Fundamentals — ",
+        institution: "MaxPlus",
     },
     EducationEntry {
         title: "M.Eng., Engineering — ",
