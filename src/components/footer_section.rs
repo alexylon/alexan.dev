@@ -7,15 +7,7 @@ pub fn FooterSection() -> Element {
 
         footer {
             class: "footer-section",
-            p {
-                "Hosted on my Raspberry Pi and served with "
-                a {
-                    href: "https://github.com/alexylon/serve",
-                    target: "_blank",
-                    rel: "noopener noreferrer",
-                    "serve"
-                }
-            }
+            p {"Hosted on my Raspberry Pi"}
             img { src: "https://forthebadge.com/images/badges/made-with-rust.svg" }
             br {}
             p { "© 2025 Alexander Alexandrov" }
