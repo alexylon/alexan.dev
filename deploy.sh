@@ -1,39 +1,42 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-# Image and container names
 IMAGE="innoxius/alexo:latest"
 CONTAINER="alexo"
+STAGE_DIR="site_public"
 
-# Detect the correct Docker platform for Raspberry Pi
-arch="$(uname -m)"
-case "$arch" in
-  aarch64)   PLATFORM="linux/arm64/v8" ;;
-  armv7l)    PLATFORM="linux/arm/v7" ;;
-  armv6l)    PLATFORM="linux/arm/v6" ;;
-  *)         echo "Warning: unrecognized arch '$arch', defaulting to linux/amd64"; PLATFORM="linux/amd64" ;;
-esac
-
-# Ensure buildx is ready
-if ! docker buildx inspect builder >/dev/null 2>&1; then
-  docker buildx create --name builder --use >/dev/null
+# 1) Bundle on the Pi (host), using your existing Rust/Dioxus toolchain
+#    If already bundled, this will just refresh the output.
+if command -v dx >/dev/null 2>&1; then
+  dx bundle --release
 else
-  docker buildx use builder >/dev/null
+  echo "Error: dioxus CLI (dx) not found in PATH. Install with: cargo install dioxus-cli"
+  exit 1
 fi
 
-# Build for the detected platform and load locally
-docker buildx build \
-  --platform "${PLATFORM}" \
-  -t "${IMAGE}" \
-  --load \
-  .
+# 2) Locate the generated public dir from Dioxus
+#    Typical path: target/dx/<project>/release/web/public
+PUBDIR="$(find target/dx -type d -path '*/release/web/public' 2>/dev/null | head -n1 || true)"
+if [[ -z "${PUBDIR}" ]]; then
+  echo "Error: Could not locate the bundled public directory under target/dx/*/release/web/public"
+  exit 1
+fi
 
-# Stop/remove previous container if exists
+# 3) Stage the public files into a predictable folder included in the Docker build context
+rm -rf "${STAGE_DIR}"
+mkdir -p "${STAGE_DIR}"
+cp -R "${PUBDIR}/." "${STAGE_DIR}/"
+
+# 4) Stop any previous container
 if docker ps -a --format '{{.Names}}' | grep -q "^${CONTAINER}\$"; then
   docker rm -f "${CONTAINER}" >/dev/null
 fi
 
-# Run on port 7777
+# 5) Build a tiny, multi-arch Nginx image that just contains the static files
+#    On the Pi, Docker will pull the correct arm image automatically.
+docker build -t "${IMAGE}" .
+
+# 6) Run on port 7777
 docker run -d \
   --name "${CONTAINER}" \
   --restart unless-stopped \
