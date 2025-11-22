@@ -1,4 +1,5 @@
 use dioxus::prelude::*;
+use manganis::Asset;
 use std::rc::Rc;
 
 mod components;
