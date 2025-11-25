@@ -226,6 +226,13 @@ pub const CONTACT_LINKS: &[ContactLink] = &[
         rel: Some("noopener noreferrer"),
         download: None,
     },
+    ContactLink {
+        label: "Mastodon",
+        href: ContactLinkHref::Plain("https://zaxo.io/@alex"),
+        target: Some("_blank"),
+        rel: Some("me"),
+        download: None,
+    },
     // ContactLink {
     //     label: "Resume ⬇",
     //     href: ContactLinkHref::ResumeAsset,
