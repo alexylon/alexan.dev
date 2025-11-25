@@ -15,10 +15,9 @@ pub fn ContactSection(contact_section: Signal<Option<Rc<MountedData>>>) -> Eleme
                     ContactLinkHref::Plain(href) => rsx! {
                         li {
                             a {
+                                rel: link.rel.unwrap_or(""),
                                 href: "{href}",
                                 target: link.target.unwrap_or(""),
-                                rel: link.rel.unwrap_or(""),
-                                download: link.download.unwrap_or(""),
                                 "{link.label}"
                             }}
                     },
