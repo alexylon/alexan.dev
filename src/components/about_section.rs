@@ -17,16 +17,53 @@ pub fn AboutSection() -> Element {
         years -= 1;
     }
 
+    let mut is_image_expanded = use_signal(|| false);
+
     rsx! {
         section {
             class: "about-section",
             h2 { "About Me" }
             img {
                 src: asset!("/assets/images/alex_ascii.jpg"),
-                alt: "Alexander Alexandrov"
+                alt: "Alexander Alexandrov",
+                style: "cursor: pointer;",
+                onclick: move |_| {
+                    is_image_expanded.set(true);
+                }
             }
             p {
-                "Based in Sofia, BG, I am a full-stack developer with {years}+ years of experience building scalable applications using Rust, TypeScript, React/Next.js, and Java. Skilled in end-to-end development, I deliver clean, reliable code in collaborative environments."
+                "Based in Sofia, BG, \
+                I'm a software developer who enjoys building reliable web applications and backend systems. \
+                My background is in full‑stack development across common web technologies, and I have a strong affinity for Rust when performance and reliability matter. \
+                I care about clear naming, thoughtful abstractions, and code that's easy for others to change, and I do my best work on low‑ego, collaborative teams. \
+                Always happy to connect and talk about real‑world software design, Rust, and wine."
+            }
+        }
+
+        if is_image_expanded() {
+            div {
+                class: "image-overlay",
+                style: "position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.9); display: flex; align-items: center; justify-content: center; z-index: 1000;",
+                onclick: move |_| {
+                    is_image_expanded.set(false);
+                },
+                button {
+                    class: "close-button",
+                    style: "position: absolute; top: 20px; right: 20px; background: rgba(255, 255, 255, 0.9); border: none; border-radius: 50%; width: 40px; height: 40px; font-size: 24px; cursor: pointer; display: flex; align-items: center; justify-content: center; z-index: 1001;",
+                    onclick: move |e| {
+                        e.stop_propagation();
+                        is_image_expanded.set(false);
+                    },
+                    "×"
+                }
+                img {
+                    src: asset!("/assets/images/alex_ascii.jpg"),
+                    alt: "Alexander Alexandrov",
+                    style: "max-width: 90%; max-height: 90%; object-fit: contain;",
+                    onclick: move |e| {
+                        e.stop_propagation();
+                    }
+                }
             }
         }
     }

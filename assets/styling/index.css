@@ -167,7 +167,7 @@ hr {
 
 .about-section img {
     float: left;
-    height: 120px;
+    height: 130px;
     margin-right: var(--spacing-md);
     margin-top: var(--spacing-sm);
 }
