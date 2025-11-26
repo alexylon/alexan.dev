@@ -90,26 +90,21 @@ fn App() -> Element {
             href: asset!("/assets/styling/index.css")
         }
         document::Link {
-            rel: "me",
-            href: "https://zaxo.io/@alex",
-        }
-        link {
             rel: "stylesheet",
             href: theme().css_file(),
             class: "theme-css"
         }
-        link {
+        document::Link {
             rel: "preconnect",
             href: "https://fonts.googleapis.com",
         }
-        link {
+        document::Link {
             rel: "preconnect",
             href: "https://fonts.gstatic.com",
         }
-        link {
+        document::Link {
             rel: "stylesheet",
             href: "https://fonts.googleapis.com/css2?family=Podkova:wght@400..800&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap",
-            rel: "stylesheet"
         }
         document::Title { "Alexander" }
 
