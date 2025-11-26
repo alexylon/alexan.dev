@@ -89,6 +89,10 @@ fn App() -> Element {
             rel: "stylesheet",
             href: asset!("/assets/styling/index.css")
         }
+        document::Link {
+            rel: "me",
+            href: "https://zaxo.io/@alex",
+        }
         link {
             rel: "stylesheet",
             href: theme().css_file(),
