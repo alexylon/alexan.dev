@@ -1,4 +1,6 @@
-## My simple web resume — written in Rust, powered by Dioxus, compiled to WebAssembly (WASM)
+### My simple web resume — written in Rust, powered by Dioxus, compiled to WebAssembly (WASM)
+
+![](https://github.com/alexylon/alexan.dev/actions/workflows/rust.yml/badge.svg)
 
 [alexan.dev](https://alexan.dev) is hosted on my Raspberry Pi and served with [serve](https://github.com/alexylon/serve).
 
