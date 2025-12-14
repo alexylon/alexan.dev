@@ -14,6 +14,8 @@ pub struct Skill<'a> {
 
 pub const SKILL: &[Skill] = &[
     Skill { label: "Rust" },
+    Skill { label: "React" },
+    Skill { label: "AI" },
     Skill {
         label: "JavaScript",
     },
@@ -21,7 +23,6 @@ pub const SKILL: &[Skill] = &[
         label: "TypeScript",
     },
     Skill { label: "Java" },
-    Skill { label: "React" },
     Skill { label: "Next.js" },
     Skill { label: "Redux" },
     Skill {
@@ -105,12 +106,17 @@ pub struct ProjectEntry<'a> {
 pub const PROJECTS: &[ProjectEntry] = &[
     ProjectEntry {
         name: "Ferrocrypt",
-        description: "A gui/cli encryption/decryption tool in Rust",
+        description: "A highly secure multi-platform GUI/CLI encryption/decryption tool, implemented in Rust",
         url: "https://github.com/alexylon/Ferrocrypt",
     },
     ProjectEntry {
+        name: "Sofos Code",
+        description: "A blazing-fast, interactive AI coding agent for your terminal, implemented in pure Rust",
+        url: "https://github.com/alexylon/sofos-code",
+    },
+    ProjectEntry {
         name: "Sofos",
-        description: "A multimodal, multimodel AI chatbot in React/Next.js",
+        description: "A multi-modal, multi-model AI chatbot, implemented in React/Next.js",
         url: "https://github.com/alexylon/Sofos",
     },
     ProjectEntry {
