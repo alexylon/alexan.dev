@@ -11,7 +11,7 @@
     </cargoProject>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="93a45009-5e28-485c-9ac6-a72d356c7ed8" name="Changes" comment="make the photo expandable onclick; update about me">
+    <list default="true" id="93a45009-5e28-485c-9ac6-a72d356c7ed8" name="Changes" comment="add &quot;Sofos Code&quot; to projects">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/data.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/data.rs" afterDir="false" />
     </list>
@@ -128,7 +128,7 @@
       <workItem from="1763979738329" duration="3440000" />
       <workItem from="1764151399978" duration="2857000" />
       <workItem from="1764176557494" duration="990000" />
-      <workItem from="1765736657720" duration="2486000" />
+      <workItem from="1765736657720" duration="2768000" />
     </task>
     <task id="LOCAL-00001" summary="Update education">
       <option name="closed" value="true" />
@@ -162,7 +162,15 @@
       <option name="project" value="LOCAL" />
       <updated>1764177234698</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="add &quot;Sofos Code&quot; to projects">
+      <option name="closed" value="true" />
+      <created>1765745363728</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1765745363728</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -184,6 +192,7 @@
     <MESSAGE value="migrate to dioxus 0.7" />
     <MESSAGE value="use custom index.html template" />
     <MESSAGE value="make the photo expandable onclick; update about me" />
-    <option name="LAST_COMMIT_MESSAGE" value="make the photo expandable onclick; update about me" />
+    <MESSAGE value="add &quot;Sofos Code&quot; to projects" />
+    <option name="LAST_COMMIT_MESSAGE" value="add &quot;Sofos Code&quot; to projects" />
   </component>
 </project>
