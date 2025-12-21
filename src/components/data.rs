@@ -234,7 +234,7 @@ pub const CONTACT_LINKS: &[ContactLink] = &[
     },
     ContactLink {
         label: "Mastodon",
-        href: ContactLinkHref::Plain("https://zaxo.io/@alex"),
+        href: ContactLinkHref::Plain("https://fosstodon.org/@lexer"),
         target: Some("_blank"),
         rel: Some("noopener noreferrer"),
         download: None,

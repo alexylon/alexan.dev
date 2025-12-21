@@ -11,9 +11,7 @@
     </cargoProject>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="93a45009-5e28-485c-9ac6-a72d356c7ed8" name="Changes" comment="update email">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+    <list default="true" id="93a45009-5e28-485c-9ac6-a72d356c7ed8" name="Changes" comment="update mastodon link and projects">
       <change beforePath="$PROJECT_DIR$/src/components/data.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/data.rs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -135,7 +133,7 @@
       <workItem from="1764151399978" duration="2857000" />
       <workItem from="1764176557494" duration="990000" />
       <workItem from="1765736657720" duration="3615000" />
-      <workItem from="1766352166575" duration="112000" />
+      <workItem from="1766352166575" duration="430000" />
     </task>
     <task id="LOCAL-00001" summary="Update education">
       <option name="closed" value="true" />
@@ -185,7 +183,15 @@
       <option name="project" value="LOCAL" />
       <updated>1765745618386</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="update mastodon link and projects">
+      <option name="closed" value="true" />
+      <created>1766352321354</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1766352321354</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -209,6 +215,7 @@
     <MESSAGE value="make the photo expandable onclick; update about me" />
     <MESSAGE value="add &quot;Sofos Code&quot; to projects" />
     <MESSAGE value="update email" />
-    <option name="LAST_COMMIT_MESSAGE" value="update email" />
+    <MESSAGE value="update mastodon link and projects" />
+    <option name="LAST_COMMIT_MESSAGE" value="update mastodon link and projects" />
   </component>
 </project>
