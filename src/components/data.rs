@@ -107,7 +107,7 @@ pub const PROJECTS: &[ProjectEntry] = &[
     ProjectEntry {
         name: "Ferrocrypt",
         description: "A highly secure multi-platform GUI/CLI encryption/decryption tool, implemented in Rust",
-        url: "https://github.com/alexylon/Ferrocrypt",
+        url: "https://github.com/alexylon/ferrocrypt",
     },
     ProjectEntry {
         name: "Sofos Code",
@@ -115,9 +115,9 @@ pub const PROJECTS: &[ProjectEntry] = &[
         url: "https://github.com/alexylon/sofos-code",
     },
     ProjectEntry {
-        name: "Sofos",
+        name: "Sofos Web",
         description: "A multi-modal, multi-model AI chatbot, implemented in React/Next.js",
-        url: "https://github.com/alexylon/Sofos",
+        url: "https://github.com/alexylon/sofos-web",
     },
     ProjectEntry {
         name: "Wordle",
